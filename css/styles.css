@@ -11740,16 +11740,10 @@ html {
 /*404*/
 .four_zero_four_bg {
 	background-image: url(/images/error/404.gif);
-	height: 400px;
+	height: 350px;
 	background-position: center;
 }
 
 .link_404 {
-	color: #fff !important;
-	padding: 10px 20px;
 	background: #39ac31;
-	margin: 20px 0;
-	display: inline-block;
-	border-radius: 6px;
-  text-decoration: none;
 }
