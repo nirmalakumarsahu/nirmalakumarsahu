@@ -35,7 +35,7 @@ $(document).ready(function () {
 
     //return { years, months, days };
     $(".experience-years").text(
-      years + "." + (months != 0 ? months : "") + "+"
+      years + (months != 0 ? "." + months : "") + "+"
     );
   }
 
