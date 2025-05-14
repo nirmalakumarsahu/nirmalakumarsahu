@@ -505,7 +505,7 @@ ENTRYPOINT [“java”, “-jar”, “sbapp.jar”]
 
 ### Dockerizing Spring Boot Application
 
-1. Install Git and Clone the Repository  [Repo-url](https://github.com/nirmalakumarsahu/spring-boot-docker-app.git)
+1. Install Git and Clone the Repository [spring-boot-docker-app](https://github.com/nirmalakumarsahu/spring-boot-docker-app.git)
    
    ```shell
    sudo yum install git -y
@@ -545,33 +545,50 @@ ENTRYPOINT [“java”, “-jar”, “sbapp.jar”]
 
 ---
 
-
-
-
 ## Docker Compose
 
-Docker Compose is a tool that allows you to define and manage multi-container Docker applications using `docker-compose.yml`.
+- Docker Compose is a tool that allows you to define and manage multi-container Docker applications.
+
+- It allows you to configure all your application's services (like databases, APIs, message queues, etc.) in a single docker-compose.yml file and start and run them with a single command.
+
+- When we are working with microservices based application we will have multiple services, every service will have its own docker images.
 
 ### Key Features
 
-* Multi-container Deployment
-* Service Configuration
-* One-Command Startup
-* Build and Customization
-* Service Dependencies
-* Isolation
+- **Multi-container Deployment:** Easily run multiple containers (e.g., app, database, cache) together by defining each as a service in the `docker-compose.yml` file.
+
+- **Service Configuration:** Configure containers using images, ports, environment variables (e.g., DB credentials), volumes (persistent storage), and networks (container communication).
+
+- **One-Command Startup:** Bring up all services with a single docker-compose up command, simplifying startup and management.
+
+- **Build and Customization:** Use the build directive to specify how to build Docker images, often using a Dockerfile.
+
+- **Service Dependencies:** Control the order of container startup using depends_on, ensuring one container starts before another.
+
+- **Isolation:** Compose creates an isolated network for your containers, ensuring they run in their own private environment.
 
 ### Why Use Docker Compose?
 
-* Simplifies development
-* Enables easy testing
-* Manages service dependencies
-* Supports reusability
-* Provides network isolation
+- **Simplifies Development:** Run all required services with a single command, avoiding multiple docker run calls.
+
+- **Enables Easy Testing:** Mimic production environments locally for effective integration testing.
+ 	
+- **Manages Service Dependencies:** Clearly define which services rely on others (e.g., backend depends on the database).
+ 	
+- **Supports Reusability:** Use the same docker-compose.yml for development, CI/CD, staging, and production.
+ 	
+- **Provides Network Isolation:** Automatically creates an isolated network for all application services.
 
 ### Key Concepts in Docker Compose
 
+- Docker Compose allows you to define and run multi-container applications using a simple YAML file (docker-compose.yml). 
+
+- Below are the key components you'll use in a Compose file:
+
 #### services
+
+-	Defines each container (or app component) you want to run.
+-	Each service runs one container and can be built from an image or source.
 
 ```yaml
 services:
@@ -581,11 +598,16 @@ services:
 
 #### image
 
+- Specifies the Docker image to use for the service. 
+- You can use public images from Docker Hub or private/custom ones.
+
 ```yaml
 image: <image-name>
 ```
 
 #### build
+
+- Tells Docker Compose how to build the image using a Dockerfile.
 
 ```yaml
 build:
@@ -595,11 +617,16 @@ build:
 
 #### container\_name
 
+- Sets a custom name for the container instead of the default auto-generated one.
+
 ```yaml
 container_name: <container-name>
 ```
 
 #### command
+
+- Overrides the default command defined in the Dockerfile (CMD).
+- Useful for customizing what runs inside the container.
 
 ```yaml
 command: ["java", "start"]
@@ -607,12 +634,17 @@ command: ["java", "start"]
 
 #### ports
 
+- Maps ports between the container and the host so services can be accessed externally.
+
 ```yaml
 ports:
   - "8080:80"
 ```
 
 #### environment
+
+- Defines environment variables that will be available inside the container.
+- Often used for configs, credentials, and app settings.
 
 ```yaml
 environment:
@@ -622,6 +654,9 @@ environment:
 
 #### volumes
 
+- Mounts data from the host to the container, or between containers.
+- Useful for persisting data, sharing files, or live development.
+
 ```yaml
 volumes:
   - ./data:/var/lib/mysql
@@ -630,6 +665,8 @@ volumes:
 
 #### networks
 
+- Defines and connects services to Docker networks for container-to-container communication. 
+
 ```yaml
 networks:
   - backend
@@ -637,74 +674,93 @@ networks:
 
 #### depends\_on
 
+- Controls the startup order of services.
+- Ensures one service starts before another, though it doesn’t wait for it to become “ready.”
+
 ```yaml
 depends_on:
   - db
 ```
 
----
+#### Example docker-compose.yml
 
-## Docker Compose Commands (v2.x)
+```yaml
+version: '3.8'
+services:
+  mysql:
+    image: mysql:8
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mydatabase
+    networks:
+      - spring-net
 
-```sh
-docker compose up
-# Start services
+  springboot-app:
+    image: my-springboot-app:latest
+    container_name: springboot-app
+    depends_on:
+      - mysql
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/mydatabase
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    networks:
+      - spring-net
 
-docker compose up -d
-# Detached mode
-
-docker compose down
-# Stop and remove all
-
-docker compose ps
-# List containers
-
-docker compose stop
-# Stop containers
-
-docker compose start
-# Start stopped containers
-
-docker compose restart
-# Restart services
-
-docker compose logs
-# View logs
-
-docker compose logs -f
-# Follow logs
-
-docker compose build
-# Build/rebuild services
-
-docker compose pull
-# Pull images
-
-docker compose push
-# Push images
-
-docker compose exec <service> <command>
-# Execute in container
-
-docker compose run <service> <command>
-# Run one-off command
-
-docker compose config
-# Validate config
-
-docker compose version
-# Show version
+networks:
+  spring-net:
+    driver: bridge
 ```
+
+### Docker Compose Commands (v2.x)
+
+- Docker Compose v2.x introduced several changes from v1.x, especially around integration with the docker CLI. In v2, the docker-compose command is replaced by docker compose (without the hyphen). Here's a list of commonly used Docker Compose v2.x commands:
+
+| Command                                      | Description                                                             |
+|----------------------------------------------|-------------------------------------------------------------------------|
+| `docker compose up`                          | Start services defined in `docker-compose.yml`.                         |
+| `docker compose up -d`                       | Start services in detached mode (background).                           |
+| `docker compose down`                        | Stop and remove containers, networks, volumes, and images created by up.|
+| `docker compose ps`                          | List containers related to the Compose project.                         |
+| `docker compose stop`                        | Stop running containers without removing them.                          |
+| `docker compose start`                       | Start existing (stopped) containers.                                    |
+| `docker compose restart`                     | Restart services.                                                       |
+| `docker compose logs`                        | View logs of the services.                                              |
+| `docker compose logs -f`                     | Follow logs output (real-time).                                         |
+| `docker compose build`                       | Build or rebuild services.                                              |
+| `docker compose pull`                        | Pull service images.                                                    |
+| `docker compose push`                        | Push service images.                                                    |
+| `docker compose exec <service> <command>`    | Run a command inside a running container (e.g., `bash`).                |
+| `docker compose run <service> <command>`     | Run one-off command (creates a new container).                          |
+| `docker compose config`                      | Validate and view the merged Compose file configuration.                |
+
+### [🔝 Back to Top](#index)
 
 ---
 
 ## Docker Networks
 
-Docker Networks allow containers to communicate securely and efficiently.
+- Docker Network is a system that enables containers to communicate with each other and with external systems.
+
+- By default, each container is isolated, but Docker networks allow secure and efficient inter-container communication.
+
+- In essence, a Docker network connects Docker containers, giving them the ability to:
+  - Discover and talk to each other by name 
+  - Access external services 
+  - Be isolated or exposed as needed
+
+- There are different type of docker networks are available
+
 
 ### Types of Docker Networks
 
 #### bridge (default)
+
+- Default network type in Docker Compose.
+- Containers in the same Compose file automatically use a custom bridge network.
+- They can communicate using service names as hostnames.
+- You usually don’t need to define this manually unless you want a specific name or use across multiple Compose files.
 
 ```yaml
 networks:
@@ -714,17 +770,28 @@ networks:
 
 #### host
 
+- The container shares the host’s networking stack (no isolation).
+- Not supported on Docker Desktop (Windows/macOS).
+- Use only on Linux for special cases.
+
 ```yaml
 network_mode: host
 ```
 
 #### none
 
+- No network interface is created inside the container.
+- The container is completely isolated.
+
 ```yaml
 network_mode: none
 ```
 
 #### overlay (for Docker Swarm)
+
+- Used in Docker Swarm mode.
+- Allows containers running on different Docker hosts to communicate.
+- Not applicable for standalone Docker Compose (only works with docker stack deploy).
 
 ```yaml
 networks:
@@ -734,70 +801,98 @@ networks:
 
 #### macvlan
 
+- Gives containers their own IP on your local network.
+- Acts like a physical device on the LAN.
+- Complex setup and rarely used in basic Docker Compose setups.
+
 ```yaml
 networks:
   macvlan_network:
     ipv4_address: 192.168.1.101
 ```
 
+### [🔝 Back to Top](#index)
+
 ---
 
 ## Dockerizing Spring Boot App with MySQL using Docker Compose
 
-1. **Install Docker Compose**
+- A MySQL Docker image (pulled from Docker Hub) → we use it to create a MySQL container.
+- Our Spring Boot code → we build a Docker image from it → then run it as a Spring Boot container.
+- To make them communicate, both containers must run in the same Docker network. This way, the Spring Boot app can connect to the MySQL container using its name.
 
-### Amazon Linux
+![Docker network](images/docker-network.png)
 
-```sh
+
+**Step 1:** Install Docker compose if not installed
+
+- **For Amazon Linux:** Amazon Linux 2 now supports Compose v2, which is a plugin for Docker CLI
+```shell
+# Create the CLI plugin directory
 mkdir -p ~/.docker/cli-plugins
+
+# Download the latest Docker Compose binary
 curl -SL https://github.com/docker/compose/releases/download/v2.35.1/docker-compose-linux-x86_64 \
-  -o $DOCKER_CONFIG/cli-plugins/docker-compose
+-o $DOCKER_CONFIG/cli-plugins/docker-compose
+
+# Make the binary executable
 chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
+
+# Test version
 docker compose version
 ```
 
-### Ubuntu
-
-```sh
+- **For Ubuntu:**
+```shell
+# Create the CLI plugin directory
 mkdir -p ~/.docker/cli-plugins
+
+# Download the latest Docker Compose binary
 curl -SL https://github.com/docker/compose/releases/download/v2.35.1/docker-compose-linux-x86_64 \
-  -o ~/.docker/cli-plugins/docker-compose
+-o ~/.docker/cli-plugins/docker-compose
+
+# Make the binary executable
 chmod +x ~/.docker/cli-plugins/docker-compose
+
+# Test version
 docker compose version
 ```
 
-2. **Clone the Repository**
+**Step 2:** Clone the Repository [spring-boot-docker-app](https://github.com/nirmalakumarsahu/spring-boot-docker-app.git)
 
-```sh
+```shell
 git clone <repo-url>
 ```
 
-3. **Build the Application**
+**Step 3:** Navigate to the Project Directory and Build the Application
 
-```sh
+```shell
 cd <project-directory>
 mvn clean package
 ```
 
-4. **Build Docker Image**
+**Step 4:** Build the Docker Image
 
-```sh
+```shell
 docker build -t your-image-name .
 ```
 
-5. **Run with Docker Compose**
+>**Note:**
+>- Make sure to use the same application image name as specified in the Docker Compose file.
+>- In your application.properties file, the database URL (spring.datasource.url) should use the MySQL container name defined in the docker-compose.yml file
 
-```sh
+**Step 5:** Run the Docker Container using docker compose
+
+```shell
 docker compose up -d
 ```
 
-6. **Access the Application**
+**Step 6:** Enable host port in security group and access the application.
 
-```sh
-http://<Public IP>:<port>/api/v1/home/greeting
-```
+http://`Public IP`:`port`/
 
-**Note:**
+### [🔝 Back to Top](#index)
 
-* Ensure Java version compatibility.
-* Use container name in DB URL in `application.properties`.
+### [Read More ➡️](https://nirmalakumarsahu.in/articles.html)
+
+---
