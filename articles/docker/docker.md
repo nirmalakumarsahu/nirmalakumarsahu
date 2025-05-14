@@ -103,7 +103,7 @@ Installing and configuring all of these manually on different machines can be ti
   - **Private** (restricted access)
     - Ex: Harbor, JFrog Artifactory, Sonatype Nexus Repository, Self-hosted Docker Registry
 
-### Docker Hub
+#### Docker Hub
 
 - **Docker Hub** is a public Docker Registry service provided by Docker Inc.
 
@@ -839,10 +839,10 @@ networks:
 
 ![Docker network](images/docker-network.png)
 
-
 **Step 1:** Install Docker compose if not installed
 
 - **For Amazon Linux:** Amazon Linux 2 now supports Compose v2, which is a plugin for Docker CLI
+
 ```shell
 # Create the CLI plugin directory
 mkdir -p ~/.docker/cli-plugins
@@ -859,6 +859,7 @@ docker compose version
 ```
 
 - **For Ubuntu:**
+
 ```shell
 # Create the CLI plugin directory
 mkdir -p ~/.docker/cli-plugins
