@@ -16,6 +16,22 @@
 - [Docker Setup on AWS EC2](#docker-setup-on-aws-ec2)
 - [Docker Architecture](#docker-architecture)
   - [Docker Commands](#docker-commands)
+- [Dockerfile](#dockerfile)
+  - [Dockerfile Instructions or Keywords](#dockerfile-instructions-or-keywords)
+  - [To Build a Docker Image](#to-build-a-docker-image)
+  - [To Run a Docker Image](#to-run-a-docker-image)
+  - [To Push a Docker Image to Docker Hub](#to-push-a-docker-image-to-docker-hub)
+  - [Dockerfile for Java Web Application](#dockerfile-for-java-web-application)
+  - [Dockerfile Spring Boot Application](#dockerfile-spring-boot-application)
+  - [Dockerizing Spring Boot Application](#dockerizing-spring-boot-application)
+- [Docker Compose](#docker-compose)
+  - [Key Features](#key-features)
+  - [Why Use Docker Compose?](#why-use-docker-compose)
+  - [Key Concepts in Docker Compose](#key-concepts-in-docker-compose)
+  - [Docker Compose Commands](#docker-compose-commands)
+- [Docker Networks](#docker-networks)
+  - [Types of Docker Networks](#types-of-docker-networks)
+- [Dockerizing Spring Boot App with MySQL using Docker Compose](#dockerizing-spring-boot-app-with-mysql-using-docker-compose)
 
 ---
 
@@ -713,7 +729,7 @@ networks:
     driver: bridge
 ```
 
-### Docker Compose Commands (v2.x)
+### Docker Compose Commands
 
 - Docker Compose v2.x introduced several changes from v1.x, especially around integration with the docker CLI. In v2, the docker-compose command is replaced by docker compose (without the hyphen). Here's a list of commonly used Docker Compose v2.x commands:
 
