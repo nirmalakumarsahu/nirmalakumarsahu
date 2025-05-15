@@ -99,8 +99,7 @@ The Build and Deployment process ensures that all services are properly compiled
 4. Perform code review using **SonarQube**
 5. Package the application (JAR/WAR)
 6. Build Docker image
-7. Create Docker container
-8. Deploy the application on the server
+7. Create and starting Docker container based on Docker image
 
 ### [🔝 Back to Top](#index)
 

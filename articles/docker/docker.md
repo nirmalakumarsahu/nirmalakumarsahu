@@ -419,7 +419,7 @@ docker build -t <image-name> .
   - **-t image-name:tag**
     - The **-t** flag is used to tag the image with a name and optionally a version (tag).
     - **image-name:** The name you want to assign to the image (e.g., my-app, web-server, python-app).
-    - **tag** The tag to specify a version or variant (e.g., latest, v1, prod). If you don't specify a tag, it defaults to latest. 
+    - **tag:** The tag to specify a version or variant (e.g., latest, v1, prod). If you don't specify a tag, it defaults to latest. 
   - **. (dot)**
     - The dot (.) represents the build context, which in most cases is the current directory. 
     - It tells Docker to use the current directory to look for the Dockerfile and any associated files needed to build the image. 
