@@ -841,7 +841,7 @@ networks:
 
 **Step 1:** Install Docker compose if not installed
 
-- **For Amazon Linux:** Amazon Linux 2 now supports Compose v2, which is a plugin for Docker CLI
+- **For Amazon Linux:** Amazon Linux now supports Docker Compose v2, which is a plugin for Docker CLI
 
 ```shell
 # Create the CLI plugin directory
