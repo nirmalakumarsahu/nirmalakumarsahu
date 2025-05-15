@@ -485,7 +485,6 @@ docker run <image-name>
 > #or
 > docker tag image-name dockerhub-username/image-name
 > ```
-> - Different programming languages [Dockerfile](https://github.com/nirmalakumarsahu/deployment-files)
 
 ### Dockerfile for Java Web Application
 
@@ -518,6 +517,8 @@ EXPOSE 8080
 
 ENTRYPOINT [“java”, “-jar”, “sbapp.jar”]
 ```
+
+> **Note:** Different programming languages [Dockerfile](https://github.com/nirmalakumarsahu/deployment-files)
 
 ### Dockerizing Spring Boot Application
 
