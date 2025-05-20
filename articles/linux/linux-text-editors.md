@@ -8,7 +8,7 @@
 
 ## index
 
-- [vi / vim](#-vi--vim-)
+- [vi / vim](#-vi--vim)
 - [Using touch and vi in Linux](#-using-touch-and-vi-in-linux)
 - [cat Command](#-cat-command)
 
