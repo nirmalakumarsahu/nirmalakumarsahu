@@ -101,6 +101,9 @@
                             <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="setTimeout(() => location.reload(), 1000)">
 
                                 <input type="hidden" name="access_key" value="294d068b-8fea-4991-aeb8-1dcd08c2aee3" />
+                                <!-- <input type="hidden" name="subject" value="New message via portfolio contact form" />-->
+                                <input type="hidden" name="from_name" value="Let's work together!">
+
                                 <!-- Name input-->
                                 <div class="form-floating mb-3">
                                     <input class="form-control" name="Full Name" id="name" type="text"
@@ -124,7 +127,15 @@
                                     <input class="form-control" id="phone" name="Phone No" type="tel"
                                         placeholder="(123) 456-7890" required />
                                     <label for="phone">Phone number</label>
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is
+                                    <div class="invalid-feedback" data-sb-feedback="phone:required">Phone number is
+                                        required.</div>
+                                </div>
+                                <!-- Subject input-->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="subject" name="subject" type="text"
+                                           placeholder="(123) 456-7890" required />
+                                    <label for="subject">Subject</label>
+                                    <div class="invalid-feedback" data-sb-feedback="subject:required">Subject is
                                         required.</div>
                                 </div>
                                 <!-- Message input-->
