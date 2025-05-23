@@ -30,7 +30,7 @@ Manages the build, deployment, release, and infrastructure operations. They ensu
 A combined cross-functional team that integrates development and operations responsibilities. DevOps streamlines collaboration, automates builds, tests, deployments, and monitoring to accelerate delivery and improve reliability.
 
 
-### [🔝 Back to Top](#index)
+### [🔝 Back to Top](#teams-in-a-real-time-application-environment)
 
 ### [Read More ➡️](https://nirmalakumarsahu.in/articles.html)
 

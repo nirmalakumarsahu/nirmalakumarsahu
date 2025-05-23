@@ -96,7 +96,7 @@
 
 📢 Regularly sync with your manager for updates, feedback, and continuous improvement strategies.
 
-### [🔝 Back to Top](#index)
+### [🔝 Back to Top](#developer-roles-and-responsibilities)
 
 ### [Read More ➡️](https://nirmalakumarsahu.in/articles.html)
 
