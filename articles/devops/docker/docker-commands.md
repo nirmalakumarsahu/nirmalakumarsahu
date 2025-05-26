@@ -1,4 +1,4 @@
-# 🐳 **Docker Complete Commands Guide**
+# Docker Complete Commands Guide
 
 [Articles](https://nirmalakumarsahu.in/articles.html) | [My Profile](https://nirmalakumarsahu.in)
 

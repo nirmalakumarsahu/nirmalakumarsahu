@@ -9,6 +9,7 @@
 ---
 
 ## Index
+
 - [What is Docker?](#what-is-docker)
   - [Issues Without Docker](#issues-without-docker)
   - [Containerization](#containerization)

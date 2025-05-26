@@ -9,6 +9,7 @@
 ---
 
 ## Index
+
 - [Real-Time Application Environments](#real-time-application-environments)
   - [Teams in a Real-Time Application Environment](#teams-in-a-real-time-application-environment)
   - [What is DevOps?](#what-is-devops)

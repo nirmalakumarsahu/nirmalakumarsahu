@@ -6,7 +6,7 @@
 
 ---
 
-## index
+## Index
 
 - [vi / vim](#-vi--vim)
 - [Using touch and vi in Linux](#-using-touch-and-vi-in-linux)

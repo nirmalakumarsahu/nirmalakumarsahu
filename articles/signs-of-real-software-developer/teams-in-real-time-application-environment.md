@@ -9,6 +9,7 @@
 [![Continuous Learning](https://img.shields.io/badge/Continuous%20Learning-Growth%20Mindset-ff69b4?logo=udemy)](https://en.wikipedia.org/wiki/Lifelong_learning)
 
 ---
+
 ### Business Analyst (BA) Team
 
 Works closely with stakeholders to gather requirements, analyze business needs, and translate them into technical specifications for the development team.
