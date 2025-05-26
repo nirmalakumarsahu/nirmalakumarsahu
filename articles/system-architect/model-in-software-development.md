@@ -6,7 +6,7 @@
 
 ---
 
-## index
+## Index
 - [What is Model in Software Development?](#-what-is-model-in-software-development)
 - [Types of Models in Software Development](#-types-of-models-in-software-development)
   - [Data Model](#-data-model)
