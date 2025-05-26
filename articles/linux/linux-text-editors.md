@@ -20,15 +20,11 @@
 
 `vi` is a built-in text editor in most Linux systems. `vim` (Vi IMproved) is an enhanced version with more features.
 
----
-
 ### 📁 Opening Files
 
 ```bash
 vi filename        # Opens file or creates it if it doesn't exist
 ```
-
----
 
 ### 🎛️ Modes in `vi`
 
@@ -38,8 +34,6 @@ vi filename        # Opens file or creates it if it doesn't exist
 | Insert Mode  | For typing and editing text                             |
 | Visual Mode  | For selecting blocks of text                            |
 | Command Mode | For saving, quitting, searching, etc. (starts with `:`) |
-
----
 
 ### ✏️ Entering Insert Mode
 
@@ -52,8 +46,6 @@ vi filename        # Opens file or creates it if it doesn't exist
 | `o`     | Open new line below         |
 | `O`     | Open new line above         |
 
----
-
 ### 💾 Saving & Exiting
 
 | Command | Action                          |
@@ -64,8 +56,6 @@ vi filename        # Opens file or creates it if it doesn't exist
 | `:q`    | Quit (only if no changes)       |
 | `:q!`   | Force quit (discard changes)    |
 | `ZZ`    | Save and exit (no colon needed) |
-
----
 
 ### 🧭 Navigation (in Normal Mode)
 
@@ -84,8 +74,6 @@ vi filename        # Opens file or creates it if it doesn't exist
 | `G`  | End of file                   |
 | `:n` | Go to line `n` (e.g., `:25`)  |
 
----
-
 ### 🧹 Deleting Text
 
 | Command | Action                        |
@@ -96,8 +84,6 @@ vi filename        # Opens file or creates it if it doesn't exist
 | `d$`    | Delete to end of line         |
 | `d0`    | Delete to start of line       |
 | `dG`    | Delete to end of file         |
-
----
 
 ### 📄 Copy, Paste, Undo
 
@@ -111,8 +97,6 @@ vi filename        # Opens file or creates it if it doesn't exist
 | `u`        | Undo                |
 | `Ctrl + r` | Redo                |
 
----
-
 ### 🔍 Searching & Replacing
 
 | Command         | Description                          |
@@ -123,8 +107,6 @@ vi filename        # Opens file or creates it if it doesn't exist
 | `N`             | Repeat search in opposite direction  |
 | `:%s/foo/bar/g` | Replace all "foo" with "bar" in file |
 | `:s/foo/bar/g`  | Replace all in current line          |
-
----
 
 ### 📐 Visual Mode
 
@@ -138,8 +120,6 @@ vi filename        # Opens file or creates it if it doesn't exist
 | `>`        | Indent selected                  |
 | `<`        | Un-indent selected               |
 
----
-
 ### 🔁 Split Windows & Tabs (Advanced)
 
 | Command        | Action                |
@@ -149,8 +129,6 @@ vi filename        # Opens file or creates it if it doesn't exist
 | `Ctrl + w, w`  | Switch between splits |
 | `:tabnew`      | Open new tab          |
 | `gt` / `gT`    | Next / previous tab   |
-
----
 
 ### ⚙ Useful Tips
 
@@ -189,8 +167,6 @@ vi Dockerfile
 
 This opens the file for editing. You can now press `i` to insert text, then use `:wq` to save and exit.
 
----
-
 ### 🔄 Summary Workflow:
 
 ```bash
@@ -218,8 +194,6 @@ cat Dockerfile
 
 🔹 This will print the contents of `Dockerfile` to the terminal.
 
----
-
 ### ✍️ 2. Create a New File with `cat`
 
 ```bash
@@ -236,8 +210,6 @@ to save and exit.
 
 > ⚠️ This **overwrites** the file if it already exists.
 
----
-
 ### ➕ 3. Append to a File
 
 ```bash
@@ -250,8 +222,6 @@ Type content, then press:
 Ctrl + D
 ```
 
----
-
 ### 📚 4. View Multiple Files Together
 
 ```bash
@@ -259,8 +229,6 @@ cat file1.txt file2.txt
 ```
 
 Displays both files' content one after another.
-
----
 
 ### 🔢 5. Show Line Numbers
 
@@ -274,8 +242,6 @@ cat -n filename
 cat -n Dockerfile
 ```
 
----
-
 ### 📂 Bonus: Save Output to Another File
 
 ```bash
@@ -284,9 +250,7 @@ cat file1.txt > copy.txt
 
 This **copies** contents from `file1.txt` into `copy.txt`.
 
----
-
-## 🚀 Example Workflow
+### 🚀 Example Workflow
 
 ```bash
 touch hello.sh

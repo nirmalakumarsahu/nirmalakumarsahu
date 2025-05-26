@@ -17,6 +17,7 @@
   - [Process Model (Software Development Life Cycle Models)](#-process-model-software-development-life-cycle-models)
 - [Summary Table](#-summary-table)
 - [Why Models Are Important in Software Development](#-why-models-are-important-in-software-development)
+
 ---
 
 ## 📘 What is Model in Software Development?
@@ -59,10 +60,6 @@ A **data model** defines how data is organized, stored, and related in a softwar
 
 When designing a database for an e-commerce platform, you define data models for `Customer`, `Order`, `Product`, etc.
 
-### [🔝 Back to Top](#index)
-
----
-
 ### 🏢 Domain Model
 
 #### ✅ Description:
@@ -82,10 +79,6 @@ A **domain model** represents the core concepts and logic of the business proble
 #### 🧠 Use Case:
 
 In a hospital management system, domain models could include `Patient`, `Doctor`, `Appointment`, each reflecting real-world roles.
-
-### [🔝 Back to Top](#index)
-
----
 
 ### 🧩 Model in MVC Architecture (Model-View-Controller)
 
@@ -117,10 +110,6 @@ public class User {
 
 In a Spring Boot web app, the `User` class is the model, which is used by the controller and rendered in the view (UI).
 
-### [🔝 Back to Top](#index)
-
----
-
 ### 🎨 UML Model (Unified Modeling Language)
 
 #### ✅ Description:
@@ -141,10 +130,6 @@ A UML class diagram that shows how `Customer` relates to `Order` and `Product`.
 
 Used in the planning and design phase of software to communicate architecture and flow to stakeholders and developers.
 
-### [🔝 Back to Top](#index)
-
----
-
 ### 🧠 Machine Learning (ML) Model
 
 #### ✅ Description:
@@ -164,10 +149,6 @@ A trained sentiment analysis model that predicts whether a review is positive or
 #### 🧠 Use Case:
 
 Used in AI applications like chatbots, recommendation systems, and fraud detection.
-
-### [🔝 Back to Top](#index)
-
----
 
 ### 🔄 Process Model (Software Development Life Cycle Models)
 
