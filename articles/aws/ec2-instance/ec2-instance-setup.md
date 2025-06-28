@@ -1,4 +1,4 @@
-# AWS Account Setup
+# EC2 Instance Setup
 
 [Articles](https://nirmalakumarsahu.in/aws.html) | [My Profile](https://nirmalakumarsahu.in)
 
