@@ -120,7 +120,7 @@ From the AWS Console:
 * In the **search bar**, type "`EC2`".
 * Click on **EC2** under “Services”.
 
-![EC2 Dashboard](images/b1.ec2-launch.png)
+![EC2 Dashboard](../images/b1.ec2-launch.png)
 
 **Step 3: Launch an Instance**
 
@@ -135,14 +135,14 @@ Click the **“Launch Instance”** button to begin setting up your virtual serv
     * 🐧 **Ubuntu Server 22.04 LTS** *(common for Java/Spring Boot apps)*
     * 🪟 **Windows Server** *(if required)*
 
-![Choose AMI](images/b2.choose-AMI.png)
+![Choose AMI](../images/b2.choose-AMI.png)
 
 **Step 5: Choose an Instance Type**
 
 * Select an instance type based on compute and memory needs.
 * For **free-tier eligible users**, select `t2.micro` or `t3.micro`.
 
-![Choose Instance Type](images/b3.instance-type.png)
+![Choose Instance Type](../images/b3.instance-type.png)
 
 **Step 6: Configure Key Pair for SSH**
 
@@ -150,7 +150,7 @@ To connect securely to your EC2 instance:
 
 * If you **already have a key pair**, choose it from the dropdown.
 
-![Select Key Pair](images/b4.choose-key-pair.png)
+![Select Key Pair](../images/b4.choose-key-pair.png)
 
 * To **create a new key pair**:
 
@@ -159,7 +159,7 @@ To connect securely to your EC2 instance:
     3. Choose `.PEM` (Linux/macOS) or `.PPK` (Windows).
     4. Click **Create** and download it — **you can’t download it again!**
 
-![Download Key Pair](images/b5.create-new-key-pair.png)
+![Download Key Pair](../images/b5.create-new-key-pair.png)
 
 **Step 7: Configure Security Group**
 
@@ -178,7 +178,7 @@ A **Security Group** acts like a firewall.
 * Double-check your instance details (AMI, type, key pair, security group).
 * Click **Launch Instance**.
 
-![Review and Launch](images/b6.review-lanuch.png)
+![Review and Launch](../images/b6.review-lanuch.png)
 
 **Step 9: Connect to Your Instance**
 
@@ -188,7 +188,7 @@ Once launched:
 2. Click **Connect**.
 3. Use **SSH** in Terminal (Linux/macOS) or **PuTTY** (Windows):
 
-![Access Instance](images/b7.access-instance.png)
+![Access Instance](../images/b7.access-instance.png)
 
 ### [🔝 Back to Top](#index)
 

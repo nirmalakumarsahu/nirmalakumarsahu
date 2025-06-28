@@ -114,20 +114,20 @@ You can interact with AWS through:
 * Visit [https://aws.amazon.com](https://aws.amazon.com).
 * Click on **"Create an AWS Account"**.
 
-![1.create-new-account.png](images/1.create-new-account.png)
+![1.create-new-account.png](../images/1.create-new-account.png)
 
 ### **Step 2: Start the Sign-Up Process**
 
 * Click on **"New to AWS? Sign up"**.
 
-![2.new-to-aws-sign-up.png](images/2.new-aws.png)
+![2.new-to-aws-sign-up.png](../images/2.new-aws.png)
 
 ### **Step 3: Enter Root User Information**
 
 * Provide your **Root user email address** and an **AWS account name**.
 * Click on **"Verify email address"**.
 
-![3.enter-root-user-info.png](images/3.verify-email.png)
+![3.enter-root-user-info.png](../images/3.verify-email.png)
 
 ### **Step 4: Email Verification**
 
@@ -135,14 +135,14 @@ You can interact with AWS through:
 * Enter the **verification code** on the AWS page.
 * Click **"Verify"**.
 
-![4.email-verification.png](images/4.confirm-verify.png)
+![4.email-verification.png](../images/4.confirm-verify.png)
 
 ### **Step 5: Set Root User Password**
 
 * Enter a **strong password** and confirm it.
 * Click **"Continue"**.
 
-![5.set-root-user-password.png](images/5.password.png)
+![5.set-root-user-password.png](../images/5.password.png)
 
 ### **Step 6: Provide Contact Information**
 
@@ -156,7 +156,7 @@ You can interact with AWS through:
 * Check **"I have read and agree to the terms"**.
 * Click **"Agree and Continue"**.
 
-![6.provide-contact-info.png](images/6.contact-info.png)
+![6.provide-contact-info.png](../images/6.contact-info.png)
 
 ### **Step 7: Add Billing Information**
 
@@ -165,14 +165,14 @@ You can interact with AWS through:
 * Click **"Verify and Continue"**.
 * You may receive a small test charge for verification — enter the **OTP** from your bank to complete.
 
-![7.add-billing-info.png](images/7.billing-info.png)
+![7.add-billing-info.png](../images/7.billing-info.png)
 
 ### **Step 8: Identity Confirmation**
 
 * Fill in your identity details (name, address, etc.).
 * Click **"Continue"**.
 
-![8.identity-confirmation.png](images/8.confirmation-identity.png)
+![8.identity-confirmation.png](../images/8.confirmation-identity.png)
 
 ### **Step 9: Mobile Number Verification**
 
@@ -180,21 +180,21 @@ You can interact with AWS through:
 * Complete the CAPTCHA.
 * Click **"Send SMS"**.
 
-![9.mobile-number-verification.png](images/9.confirmation-identity.png)
+![9.mobile-number-verification.png](../images/9.confirmation-identity.png)
 
 ### **Step 10: Enter SMS Verification Code**
 
 * Enter the **verification code** sent to your phone.
 * Click **"Continue"**.
 
-![10.enter-sms-verification-code.png](images/10.confirmation-code.png)
+![10.enter-sms-verification-code.png](../images/10.confirmation-code.png)
 
 ### **Step 11: Select a Support Plan**
 
 * Choose **Basic Support – Free**.
 * Click **"Complete sign-up"**.
 
-![11.select-support-plan.png](images/11.account-type.png)
+![11.select-support-plan.png](../images/11.account-type.png)
 
 ### **Step 12: Final Confirmation**
 
@@ -202,7 +202,7 @@ You can interact with AWS through:
 * Click **"Go to the AWS Management Console"** to log in.
 * You’re now ready to start using AWS!
 
-![12.final-confirmation.png](images/12.congratulation.png)
+![12.final-confirmation.png](../images/12.congratulation.png)
 
 ### [🔝 Back to Top](#index)
 

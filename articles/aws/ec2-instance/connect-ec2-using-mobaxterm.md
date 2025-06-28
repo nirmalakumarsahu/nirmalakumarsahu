@@ -99,7 +99,7 @@ Before you start, ensure you have the following:
 1. Open **MobaXterm**.
 2. Click the **"Session"** button in the top-left corner.
 
-![Open Session](images/c1.open-moba.png)
+![Open Session](../images/c1.open-moba.png)
 
 **Step 4: Configure the SSH Session**
 
@@ -113,7 +113,7 @@ Before you start, ensure you have the following:
 
 > ✅ **Tip**: Make sure the `.pem` file has proper permissions (`chmod 400 key.pem` if you test on Linux later).
 
-![Select SSH](images/c2.select-ssh.png)
+![Select SSH](../images/c2.select-ssh.png)
 
 **Step 5: Connect to EC2**
 
@@ -123,7 +123,7 @@ Click **OK** to start the session.
 * Once connected, a terminal will open, and you'll have **shell access** to your EC2 instance.
 * The **left panel** will show an **SFTP file browser** — you can drag and drop files directly to/from the EC2 instance.
 
-![Connect to EC2](images/c3.lauch.png)
+![Connect to EC2](../images/c3.lauch.png)
 
 ### [🔝 Back to Top](#index)
 
