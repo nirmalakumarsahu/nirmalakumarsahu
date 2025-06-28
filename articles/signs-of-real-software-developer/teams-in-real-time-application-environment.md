@@ -1,6 +1,6 @@
 # Teams in a Real-Time Application Environment
 
-[Articles](https://nirmalakumarsahu.in/articles.html) | [My Profile](https://nirmalakumarsahu.in)
+[Articles](https://nirmalakumarsahu.in/miscellaneous.html) | [My Profile](https://nirmalakumarsahu.in)
 
 [![Development](https://img.shields.io/badge/Development-Team-blue?logo=visualstudiocode)](https://en.wikipedia.org/wiki/Software_development)
 [![Testing](https://img.shields.io/badge/Testing-QA-green?logo=selenium)](https://en.wikipedia.org/wiki/Software_testing)
@@ -33,6 +33,6 @@ A combined cross-functional team that integrates development and operations resp
 
 ### [🔝 Back to Top](#teams-in-a-real-time-application-environment)
 
-### [Read More ➡️](https://nirmalakumarsahu.in/articles.html)
+### [Read More ➡️](https://nirmalakumarsahu.in/miscellaneous.html)
 
 ---

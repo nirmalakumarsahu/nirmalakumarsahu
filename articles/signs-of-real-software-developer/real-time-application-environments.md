@@ -1,6 +1,6 @@
 # Real-Time Application Environments
 
-[Articles](https://nirmalakumarsahu.in/articles.html) | [My Profile](https://nirmalakumarsahu.in)
+[Articles](https://nirmalakumarsahu.in/miscellaneous.html) | [My Profile](https://nirmalakumarsahu.in)
 
 [![Fullstack](https://img.shields.io/badge/Fullstack-Developer-blue?logo=github)](https://en.wikipedia.org/wiki/Full_stack_developer) 
 
@@ -118,6 +118,6 @@ These environments help ensure the application’s **stability, performance, and
 
 ### [🔝 Back to Top](#real-time-application-environments)
 
-### [Read More ➡️](https://nirmalakumarsahu.in/articles.html)
+### [Read More ➡️](https://nirmalakumarsahu.in/miscellaneous.html)
 
 --- 

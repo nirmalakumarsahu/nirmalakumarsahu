@@ -1,6 +1,6 @@
 # Linux Text Editors
 
-[Articles](https://nirmalakumarsahu.in/articles.html) | [My Profile](https://nirmalakumarsahu.in)
+[Articles](https://nirmalakumarsahu.in/linux.html) | [My Profile](https://nirmalakumarsahu.in)
 
 [![Linux](https://img.shields.io/badge/Linux-TextEditors-blue?logo=linux)](https://www.linux.org/) [![Text Editors](https://img.shields.io/badge/TextEditors-CLI%20Tools-blue?logo=vim)](https://www.vim.org/) [![CLI](https://img.shields.io/badge/CLI-CommandLine-blue?logo=gnubash)](https://www.gnu.org/software/bash/)
 
@@ -260,6 +260,6 @@ cat hello.sh  # Displays: echo "Hello World"
 
 ### [🔝 Back to Top](#index)
 
-### [Read More ➡️](https://nirmalakumarsahu.in/articles.html)
+### [Read More ➡️](https://nirmalakumarsahu.in/linux.html)
 
 ---

@@ -42,3 +42,13 @@ $(document).ready(function () {
   calculateExperience(); // Initial call to set the value immediately
   setInterval(calculateExperience, 1000 * 60 * 60 * 24); // Update every day
 });
+
+
+// Load the navbar from an external HTML file
+fetch("nav.html")
+    .then(response => response.text())
+    .then(data => {
+        console.log("Navbar loaded successfully");
+        document.getElementById("navbar").innerHTML = data;
+    }
+);
