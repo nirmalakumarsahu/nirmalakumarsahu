@@ -45,7 +45,7 @@ $(document).ready(function () {
 
 
 // Load the navbar from an external HTML file
-fetch("nav.html")
+fetch("navbar.html")
     .then(response => response.text())
     .then(data => {
         console.log("Navbar loaded successfully");
