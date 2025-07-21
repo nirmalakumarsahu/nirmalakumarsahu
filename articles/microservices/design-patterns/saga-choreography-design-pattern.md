@@ -192,14 +192,19 @@ Since we don’t have inventory in this scenario, compensation is minimal but st
 
 ## 🛠️ Technology Stack
 
-| Layer                   | Tech                                         |
-| ----------------------- | -------------------------------------------- |
-| **Framework**           | Spring Boot                                  |
-| **Event Bus**           | Apache Kafka                                 |
-| **Message Integration** | Spring Cloud Stream                          |
-| **Database**            | MySQL/PostgreSQL or H2 for local development |
-| **Testing**             | Testcontainers, JUnit                        |
-| **Containerization**    | Docker + Docker Compose                      |
+| Layer                    | Tech                          |
+|--------------------------|-------------------------------|
+| **Framework**            | Spring Boot                   |
+| **Event Bus**            | Apache Kafka                  |
+| **Message Integration**  | Spring Cloud Stream           |
+| **Reactive Programming** | Spring Boot Webflux           | 
+| **Monitoring**           | Spring Boot Actuator          |
+| **Documentation**        | Swagger/OpenAPI               | 
+| **Build Tool**           | Maven                         |
+| **Database**             | MySQL                         |
+| **Containerization**     | Docker Compose                |
+
+
 
 ### 📝 Example Code Snippet (Implementation)
 
