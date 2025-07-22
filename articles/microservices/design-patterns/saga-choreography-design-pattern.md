@@ -100,7 +100,7 @@ Each service is **autonomous** and responsible for:
 
 If a step fails, a **compensating transaction** (a rollback-like action) is triggered through another event.
 
-### 🧭 Two Ways to Implement Sagas
+#### 🧭 Two Ways to Implement Sagas
 
 | Approach          | Description                                                                                |
 | ----------------- | ------------------------------------------------------------------------------------------ |
@@ -109,11 +109,7 @@ If a step fails, a **compensating transaction** (a rollback-like action) is trig
 
 We will use the **Choreography approach** for its simplicity and full decoupling.
 
-### [🔝 Back to Top](#index)
-
----
-
-## 📣 Event Sourcing
+### 📣 Event Sourcing
 
 In **Event Sourcing**, every change in the system is recorded as an **immutable event**:
 
