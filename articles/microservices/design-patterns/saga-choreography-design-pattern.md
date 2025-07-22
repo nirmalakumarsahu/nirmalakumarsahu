@@ -157,9 +157,7 @@ These events:
       * If **PaymentReserved**, marks the order as **`ORDER_COMPLETED`**.
       * If **PaymentDeclined**, marks the order as **`ORDER_CANCELLED`**.
 
----
-
-## 🔁 Compensation Strategy (Two Services Only)
+### 🔁 Compensation Strategy (Two Services Only)
 
 Since we don’t have inventory in this scenario, compensation is minimal but still essential:
 
