@@ -1,8 +1,8 @@
 $(document).ready(function () {
   //Copy right year
   $("#copyright-year").text(new Date().getFullYear());
-
-  const startDate = new Date("2020-01-05"); // Start date in YYYY-MM-DD format
+    //2020-01-05 [Freelance start date]
+  const startDate = new Date("2021-07-05"); // Start date in YYYY-MM-DD format
 
   function calculateExperience() {
     const endDate = new Date();
