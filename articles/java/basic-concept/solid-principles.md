@@ -27,7 +27,16 @@
   - [❌ Bad Design Example (LSP Violation)](#-bad-design-example-lsp-violation)
   - [✅ Good Design Using Interfaces (LSP Applied)](#-good-design-using-interfaces-lsp-applied)
   - [👍 Benefits of Applying LSP](#-benefits-of-applying-lsp)
- 
+- [Interface Segregation Principle (ISP)](#interface-segregation-principle-isp)
+  - [❌ Problem Statement (Violation of ISP)](#-problem-statement-violation-of-isp)
+  - [✅ Solution (Apply ISP)](#-solution-apply-isp)
+  - [🌟 Benefits of Applying ISP](#-benefits-of-applying-isp)
+- [Dependency Inversion Principle (DIP)](#dependency-inversion-principle-dip)
+  - [🛒 Real-Life Analogy](#-real-life-analogy)
+  - [❌ Problem Statement (Violation of DIP)](#-problem-statement-violation-of-dip)
+  - [✅ Solution (Apply DIP with Abstraction)](#-solution-apply-dip-with-abstraction)
+  - [🌟 Benefits of Applying DIP](#-benefits-of-applying-dip)
+- [🧾 Conclusion: Mastering the SOLID Principles](#-conclusion-mastering-the-solid-principles)
 - [🔗 Code Repository](#-code-repository)
 
 ---
@@ -504,6 +513,296 @@ public class WhatsApp implements SocialMedia, VideoCallManager {
 | 🔁 Flexible Architecture  | Interfaces give freedom to implement only required features |
 | ❌ Avoids Overridden Stubs | No empty or unsupported method implementations              |
 | 🧪 Easier Testing         | Polymorphic behavior is predictable and safe                |
+
+### [🔝 Back to Top](#index)
+
+---
+
+## Interface Segregation Principle (ISP)
+
+> **Definition**: The Interface Segregation Principle states:
+> “No client should be forced to depend on methods it does not use.”
+
+This principle emphasizes designing smaller, more specific interfaces so that classes only need to implement methods relevant to them. It helps avoid "fat" interfaces and encourages modular and maintainable code.
+
+### ❌ Problem Statement (Violation of ISP)
+
+Let’s say we have a single interface for UPI payment functionality:
+
+```java
+public interface UPIPayments {
+    void payMoney();
+    void getScratchCard();
+    void getCashBackAsCreditBalance();
+}
+```
+
+Now let’s consider the following classes:
+
+#### ✅ Google Pay
+
+```java 
+public class GooglePay implements UPIPayments {
+  @Override
+  public void payMoney() {
+
+  }
+
+  @Override
+  public void getScratchCard() {
+
+  }
+
+  @Override
+  public void getCashBackAsCreditBalance() {
+
+  }
+}
+```
+
+Google Pay supports all features, so it works fine.
+
+#### ❌ Paytm (Violation)
+
+```java
+public class Paytm implements UPIPayments {
+  @Override
+  public void payMoney() {
+
+  }
+
+  @Override
+  public void getScratchCard() {
+
+  }
+
+  @Override
+  public void getCashBackAsCreditBalance() {
+    // Not supported in Paytm
+  }
+}
+```
+
+Here, Paytm does not support `getCashBackAsCreditBalance()`, but is still forced to implement it due to the bulky interface — violating ISP.
+
+### ✅ Solution (Apply ISP)
+
+Break down the `UPIPayments` interface into smaller, more specific interfaces.
+
+```java
+public interface BasicUPIPayments {
+    void payMoney();
+    void getScratchCard();
+}
+```
+
+```java
+public interface CashbackManager {
+    void getCashBackAsCreditBalance();
+}
+```
+
+#### Now Google Pay can implement both:
+
+```java
+public class GooglePay implements BasicUPIPayments, CashbackManager {
+  @Override
+  public void payMoney() {
+
+  }
+
+  @Override
+  public void getScratchCard() {
+
+  }
+
+  @Override
+  public void getCashBackAsCreditBalance() {
+
+  }
+}
+```
+
+#### And Paytm implements only what it supports:
+
+```java
+public class Paytm implements BasicUPIPayments {
+  @Override
+  public void payMoney() {
+
+  }
+
+  @Override
+  public void getScratchCard() {
+
+  }
+}
+```
+
+Now we are **not forcing clients to implement unused methods**, fully adhering to the Interface Segregation Principle.
+
+### 🌟 Benefits of Applying ISP
+
+| Benefit                               | Description                                                                     |
+| --------------------------------------- | --------------------------------------------------------------------------------- |
+| ✅ Higher Code Reusability               | Smaller interfaces are easier to reuse across different classes and modules.      |
+| ✅ Improved Readability & Maintainability | Code is cleaner, interfaces are focused, and changes are easier to manage.        |
+| ✅ Reduced Risk of Breaking Changes      | Modifying one interface won’t impact unrelated implementations.                   |
+| ✅ Better Abstraction & Flexibility      | Allows developers to compose behavior using relevant interfaces only.             |
+| ✅ Client Satisfaction                   | Clients are not forced to implement irrelevant methods, resulting in simpler code. |
+
+### [🔝 Back to Top](#index)
+
+---
+
+## Dependency Inversion Principle (DIP)
+
+> **Definition**:
+> “High-level modules should not depend on low-level modules. Both should depend on abstractions.”
+> “Abstractions should not depend on details. Details should depend on abstractions.”
+
+This principle emphasizes **decoupling** the system by introducing interfaces (abstractions), so that high-level logic doesn't rely directly on concrete classes.
+
+### 🛒 Real-Life Analogy
+
+Imagine going to a store and paying with a **card**.
+The clerk doesn’t care whether it’s a **Debit Card** or **Credit Card** — they just **swipe it**.
+
+The card **type is abstracted** away from the payment process.
+This is exactly how we should design software using **DIP**.
+
+### ❌ Problem Statement (Violation of DIP)
+
+```java
+public class DebitCard {
+  public void doTransaction(BigDecimal amount) {
+    System.out.println("Transaction done with DebitCard");
+  }
+}
+```
+
+```java
+public class ShoppingMall {
+  private DebitCard debitCard;
+
+  public ShoppingMall(DebitCard debitCard) {
+    this.debitCard = debitCard;
+  }
+
+  public void doPayment(Object order, BigDecimal amount) {
+    debitCard.doTransaction(amount);
+  }
+
+  public static void main(String[] args) {
+    DebitCard debitCard = new DebitCard();
+    ShoppingMall mall = new ShoppingMall(debitCard);
+    mall.doPayment("some order", BigDecimal.valueOf(5000));
+  }
+}
+```
+
+#### 🧨 Problem:
+
+* `ShoppingMall` is tightly coupled to `DebitCard`.
+* If we want to use a `CreditCard`, we’ll have to change the class code — violating DIP.
+* The high-level module (ShoppingMall) **depends on the low-level module (DebitCard)** instead of an abstraction.
+
+### ✅ Solution (Apply DIP with Abstraction)
+
+#### Step 1: Create an interface `BankCard`
+
+```java
+public interface BankCard {
+    void doTransaction(int amount);
+}
+```
+
+#### Step 2: Make both DebitCard and CreditCard implement BankCard
+
+```java
+public class CreditCard implements BankCard {
+  @Override
+  public void doTransaction(BigDecimal amount) {
+    System.out.println("Transaction done with CreditCard");
+  }
+}
+```
+
+```java
+public class DebitCard implements BankCard {
+  @Override
+  public void doTransaction(BigDecimal amount) {
+    System.out.println("Transaction done with CreditCard");
+  }
+}
+```
+
+#### Step 3: Update ShoppingMall to depend on abstraction
+
+```java
+public class ShoppingMall {
+  private final BankCard bankCard;
+
+  public ShoppingMall(BankCard bankCard) {
+    this.bankCard = bankCard;
+  }
+
+  public void doPayment(Object order, BigDecimal amount) {
+    bankCard.doTransaction(amount);
+  }
+
+  public static void main(String[] args) {
+    BankCard card = new CreditCard(); // can easily switch to DebitCard
+    ShoppingMall mall = new ShoppingMall(card);
+    mall.doPayment("some order", BigDecimal.valueOf(5000));
+  }
+}
+```
+
+#### ✅ Now:
+
+* `ShoppingMall` is **loosely coupled**.
+* You can swap any `BankCard` implementation without modifying `ShoppingMall`.
+
+### 🌟 Benefits of Applying DIP
+
+| 🟩 Benefit                         | 📌 Description                                                   |
+| ---------------------------------- | ---------------------------------------------------------------- |
+| ✅ Loose Coupling                   | High-level modules are decoupled from low-level implementations. |
+| ✅ Easy to Extend and Replace Logic | Easily replace CreditCard with DebitCard, Wallet, UPI, etc.      |
+| ✅ Better Testing & Mocking         | You can inject mock objects for unit testing easily.             |
+| ✅ Promotes Dependency Injection    | Encourages constructor-based DI and IoC (Inversion of Control).  |
+| ✅ Flexible System Architecture     | Changes in low-level modules don’t affect business logic.        |
+
+### [🔝 Back to Top](#index)
+
+---
+
+## 🧾 Conclusion: Mastering the SOLID Principles
+
+The **SOLID principles** serve as the **foundation of clean, maintainable, and scalable object-oriented software design**. Each principle plays a unique role in improving the quality of your codebase:
+
+| 🔠 Principle                            | 💡 Core Idea                                                                                            |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| **S** – Single Responsibility Principle | One class, one job – encourages cohesion and clarity.                                                   |
+| **O** – Open/Closed Principle           | Be open for extension, closed for modification – supports flexibility and future growth.                |
+| **L** – Liskov Substitution Principle   | Subtypes must be substitutable for their base types – ensures correct inheritance usage.                |
+| **I** – Interface Segregation Principle | Prefer many specific interfaces over one general-purpose interface – improves usability and decoupling. |
+| **D** – Dependency Inversion Principle  | Depend on abstractions, not concretions – promotes modular and testable design.                         |
+
+#### 🚀 Why SOLID Matters
+
+✅ Encourages **clean architecture**
+✅ Reduces **tight coupling**
+✅ Improves **code reusability and testability**
+✅ Makes applications easier to **extend, debug, and maintain**
+✅ Aligns with **agile** and **modern development practices**
+
+#### 🧠 Final Thought
+
+By embracing the SOLID principles, developers can write software that is **robust, adaptable**, and **ready for change**. Whether you're working on a small project or a large enterprise system, **SOLID is a timeless design guide** that leads to better software craftsmanship.
+
+> “Bad code works. But good code evolves.”
 
 ### [🔝 Back to Top](#index)
 
