@@ -10,15 +10,15 @@
 ---
 
 ## Index
-- [✅ Introduction](#introduction)
-  - [🔤 SOLID Acronym Breakdown](#solid-acronym-breakdown)
+- [✅ Introduction](#-introduction)
+  - [🔤 SOLID Acronym Breakdown](#-solid-acronym-breakdown)
 - [Single Responsibility Principle (SRP)](#single-responsibility-principle-srp)
-  - [🧠 Understanding SRP with a Practical Example](#understanding-srp-with-a-practical-example)
-  - [❌ Problem with This Design](#problem-with-this-design)
-  - [✅ Refactored Design using SRP](#refactored-design-using-srp)
-  - [✅ Benefits of Applying SRP](#benefits-of-applying-srp)
+  - [🧠 Understanding SRP with a Practical Example](#-understanding-srp-with-a-practical-example)
+  - [❌ Problem with This Design](#-problem-with-this-design)
+  - [✅ Refactored Design using SRP](#-refactored-design-using-srp)
+  - [✅ Benefits of Applying SRP](#-benefits-of-applying-srp)
  
-- [🔗 Code Repository](#code-repository)
+- [🔗 Code Repository](#-code-repository)
 
 ---
 
@@ -46,10 +46,6 @@ In this guide, we will **deep dive into each SOLID principle**, with clear Java 
 | **D**  | **Dependency Inversion Principle**  | Depend on abstractions, not concrete implementations.               |
 
 ### [🔝 Back to Top](#index)
-
----
-
-Here's a **professionally structured and polished version** of your explanation of the **Single Responsibility Principle (SRP)**, with improved grammar, formatting, and clarity — while keeping your intent, structure, and examples intact.
 
 ---
 
@@ -221,7 +217,7 @@ public class BankService {
 
 You can find the complete Java code examples demonstrating the SOLID principles here:
 
-[![GitHub - solid-principles-java](https://img.shields.io/badge/GitHub-View%20Code-black?logo=github)](https://github.com/your-username/solid-principles-java)
+[![GitHub - solid-principles-java](https://img.shields.io/badge/GitHub-View%20Code-black?logo=github)](https://github.com/nirmalakumarsahu/solid-principles.git)
 
 ### [🔝 Back to Top](#index)
 
