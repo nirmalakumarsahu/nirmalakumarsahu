@@ -22,6 +22,11 @@
   - [❌ Bad Design Example](#-bad-design-example)
   - [✅ Good Design Using OCP](#-good-design-using-ocp)
   - [👍 Benefits of Applying OCP](#-benefits-of-applying-ocp)
+- [Liskov Substitution Principle (LSP)](#liskov-substitution-principle-lsp)
+  - [🏢 Real-world Analogy](#-real-world-analogy-1)
+  - [❌ Bad Design Example (LSP Violation)](#-bad-design-example-lsp-violation)
+  - [✅ Good Design Using Interfaces (LSP Applied)](#-good-design-using-interfaces-lsp-applied)
+  - [👍 Benefits of Applying LSP](#-benefits-of-applying-lsp)
  
 - [🔗 Code Repository](#-code-repository)
 
@@ -325,6 +330,180 @@ public class WhatsAppNotification implements NotificationService {
 | 🧪 Safe Enhancements        | You can safely introduce new behavior without breaking existing logic |
 | 🧱 Scalable Design          | Codebase grows cleanly with clear separation of concerns              |
 | ♻️ Reusability              | Implementations can be reused across different modules or services    |
+
+### [🔝 Back to Top](#index)
+
+---
+
+## Liskov Substitution Principle (LSP)
+
+The **Liskov Substitution Principle** states:
+
+> **“Derived or child classes must be substitutable for their base or parent classes.”**
+
+In simple terms:
+If class **A** is a subtype of class **B**, then we should be able to **replace B with A** anywhere in the program **without breaking the behavior**.
+
+### 🏢 **Real-world Analogy**
+
+Imagine you have a **Universal TV Remote**.
+It’s expected to work with **any TV brand** — Sony, Samsung, LG.
+
+If one brand (say LG) doesn’t respond to the **Volume Up** button, then it **violates the substitution** expectation — that all TVs behave the same with the universal remote.
+
+In code, this means:
+**If a subclass does not behave as expected when used in place of a superclass, it violates LSP.**
+
+### ❌ **Bad Design Example (LSP Violation)**
+
+```java
+public interface SocialMedia {
+  void chatWithFriend();
+  void publishPost(Object post);
+  void sendPhotosAndVideos();
+  void groupVideoCall(String... users);
+}
+```
+
+#### ✅ `Facebook` is a valid substitution
+
+```java
+public class Facebook implements SocialMedia {
+  @Override
+  public void chatWithFriend() {
+
+  }
+
+  @Override
+  public void publishPost(Object post) {
+
+  }
+
+  @Override
+  public void sendPhotosAndVideos() {
+
+  }
+
+  @Override
+  public void groupVideoCall(String... users) {
+
+  }
+}
+
+```
+
+Everything works. Facebook supports all these features.
+
+#### ❌ `WhatsApp` violates LSP
+
+```java
+public class WhatsApp implements SocialMedia {
+  @Override
+  public void chatWithFriend() {
+
+  }
+
+  @Override
+  public void publishPost(Object post) {
+    // NOT SUPPORTED — violates substitution
+  }
+
+  @Override
+  public void sendPhotosAndVideos() {
+
+  }
+
+  @Override
+  public void groupVideoCall(String... users) {
+
+  }
+}
+
+```
+
+🛑 **Problem**: WhatsApp does **not support publishing posts**, but it's **forced** to implement it due to inheritance.
+This breaks **LSP** — you can't substitute `WhatsApp` in place of `SocialMedia` safely.
+
+### ✅ **Good Design Using Interfaces (LSP Applied)**
+
+To apply LSP, we **segregate the behavior** into focused interfaces:
+
+```java
+public interface SocialMedia {
+    void chatWithFriend();
+    void sendPhotosAndVideos();
+}
+
+public interface SocialPostAndMediaManager {
+    void publishPost(Object post);
+}
+
+public interface VideoCallManager {
+    void groupVideoCall(String... users);
+}
+```
+
+#### ✅ `Facebook` Implementation
+
+```java
+public class Facebook implements SocialMedia, SocialPostAndMediaManager, VideoCallManager {
+
+  @Override
+  public void chatWithFriend() {
+    // Implementation for chatting with friends
+  }
+
+  @Override
+  public void sendPhotosAndVideos() {
+    // Implementation for sending photos and videos
+  }
+
+  @Override
+  public void publishPost(Object post) {
+    // Implementation for publishing a post
+  }
+
+  @Override
+  public void groupVideoCall(String... users) {
+    // Implementation for group video call
+  }
+}
+```
+
+✅ LSP is preserved — Instagram supports the interfaces it needs.
+
+#### ✅ `WhatsApp` Implementation
+
+```java
+public class WhatsApp implements SocialMedia, VideoCallManager {
+  @Override
+  public void chatWithFriend() {
+
+  }
+
+  @Override
+  public void sendPhotosAndVideos() {
+
+  }
+
+  @Override
+  public void groupVideoCall(String... users) {
+
+  }
+}
+
+```
+
+✅ WhatsApp only implements what it supports — no forced behavior.
+
+### 👍 Benefits of Applying LSP
+
+| Benefit                   | Description                                                 |
+| ------------------------- | ----------------------------------------------------------- |
+| ✅ Safe Substitution       | Subtypes can be used interchangeably with their base types  |
+| 🔁 Flexible Architecture  | Interfaces give freedom to implement only required features |
+| ❌ Avoids Overridden Stubs | No empty or unsupported method implementations              |
+| 🧪 Easier Testing         | Polymorphic behavior is predictable and safe                |
 
 ### [🔝 Back to Top](#index)
 
