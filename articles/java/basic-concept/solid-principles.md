@@ -17,6 +17,11 @@
   - [❌ Problem with This Design](#-problem-with-this-design)
   - [✅ Refactored Design using SRP](#-refactored-design-using-srp)
   - [✅ Benefits of Applying SRP](#-benefits-of-applying-srp)
+- [Open/Closed Principle (OCP)](#openclosed-principle-ocp)
+  - [🏢 Real-world Analogy](#-real-world-analogy)
+  - [❌ Bad Design Example](#-bad-design-example)
+  - [✅ Good Design Using OCP](#-good-design-using-ocp)
+  - [👍 Benefits of Applying OCP](#-benefits-of-applying-ocp)
  
 - [🔗 Code Repository](#-code-repository)
 
@@ -101,9 +106,9 @@ public class BankService {
         }
     }
 
-    public void sendOTP(OTPMediumType otpMediumType) {
+    public void sendOTP(MediumType mediumType) {
         // send OTP logic
-        switch (otpMediumType) {
+        switch (mediumType) {
             case EMAIL:
                 System.out.println("Sending OTP via Email.");
                 break;
@@ -166,9 +171,9 @@ public class LoanService {
 
 ```java
 public class NotificationService {
-    public void sendOTP(OTPMediumType otpMediumType) {
+    public void sendOTP(MediumType mediumType) {
         // send OTP logic
-        switch (otpMediumType) {
+        switch (mediumType) {
             case EMAIL:
                 System.out.println("Sending OTP via Email.");
                 break;
@@ -209,7 +214,119 @@ public class BankService {
 
 ---
 
+## Open/Closed Principle (OCP)
 
+The **Open/Closed Principle** states:
+
+> **"Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification."**
+
+In simple terms:
+You should be able to **add new functionality** to existing code **without changing** the already tested and deployed code.
+
+### 🏢 **Real-world Analogy**
+
+Think of a **plugin-based browser** (like Chrome or Firefox).
+You don’t modify the browser's core source code to add new features like ad blockers or password managers.
+Instead, you **extend** it using plugins or extensions.
+
+That’s exactly what **OCP promotes in code** — enhance features via **extension**, not **modification**.
+
+### ❌ **Bad Design Example**
+
+Here’s a simple `NotificationService`:
+
+```java
+public class NotificationService {
+  public void sendOTP(MediumType mediumType) {
+    // send OTP logic
+    switch (mediumType) {
+      case EMAIL:
+        System.out.println("Sending OTP via Email.");
+        break;
+      case SMS:
+        System.out.println("Sending OTP via SMS.");
+        break;
+      default:
+        System.out.println("Unknown OTP medium type.");
+    }
+  }
+}
+```
+
+* Every time you want to add a **new channel** (e.g., Slack, Telegram, Push Notification), you must **modify this class**.
+* This breaks OCP because it’s **not closed for modification**.
+
+### ✅ **Good Design Using OCP**
+
+Let’s use **abstraction (interfaces)** and **polymorphism** to make the system extensible.
+
+#### 🔧 Define an Interface
+
+```java
+public interface NotificationService {
+    void sendOTP();
+    void sendTransactionNotification();
+}
+```
+
+#### 📧 Email Notification Implementation
+
+```java
+public class EmailNotification implements NotificationService {
+    @Override
+    public void sendOTP() {
+        // Logic using JavaMail API
+    }
+
+    @Override
+    public void sendTransactionNotification() {
+        // Logic to send email transaction alert
+    }
+}
+```
+
+#### 📱 Mobile Notification Implementation
+
+```java
+public class MobileNotification implements NotificationService {
+    @Override
+    public void sendOTP() {
+        // Logic using Twilio SMS API
+    }
+
+    @Override
+    public void sendTransactionNotification() {
+        // SMS transaction alert logic
+    }
+}
+```
+
+#### 💬 WhatsApp Notification Implementation
+
+```java
+public class WhatsAppNotification implements NotificationService {
+    @Override
+    public void sendOTP() {
+        // Logic using WhatsApp Business API
+    }
+
+    @Override
+    public void sendTransactionNotification() {
+        // WhatsApp alert logic
+    }
+}
+```
+
+### 👍 Benefits of Applying OCP
+
+| Benefit                     | Description                                                           |
+| --------------------------- | --------------------------------------------------------------------- |
+| 🔄 No Modification Required | You don’t need to touch working code to add new notification types    |
+| 🧪 Safe Enhancements        | You can safely introduce new behavior without breaking existing logic |
+| 🧱 Scalable Design          | Codebase grows cleanly with clear separation of concerns              |
+| ♻️ Reusability              | Implementations can be reused across different modules or services    |
+
+### [🔝 Back to Top](#index)
 
 ---
 
