@@ -1,6 +1,6 @@
 # SOLID Principles
 
-[Articles](https://nirmalakumarsahu.in/articles.html) | [My Profile](https://nirmalakumarsahu.in)
+[Articles](https://nirmalakumarsahu.in/java.html) | [My Profile](https://nirmalakumarsahu.in)
 
 [![SOLID Principles](https://img.shields.io/badge/SOLID%20Principles-Software%20Design-blue?logo=solid)](https://en.wikipedia.org/wiki/SOLID)
 
