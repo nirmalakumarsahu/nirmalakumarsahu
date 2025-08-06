@@ -37,7 +37,8 @@
   - [✅ Solution (Apply DIP with Abstraction)](#-solution-apply-dip-with-abstraction)
   - [🌟 Benefits of Applying DIP](#-benefits-of-applying-dip)
 - [🧾 Conclusion: Mastering the SOLID Principles](#-conclusion-mastering-the-solid-principles)
-- [🔗 Code Repository](#-code-repository)
+- [📚 Reference](#-reference)
+  - [🔗 Code Repository](#-code-repository)
 
 ---
 
@@ -808,7 +809,9 @@ By embracing the SOLID principles, developers can write software that is **robus
 
 ---
 
-## 🔗 Code Repository
+## 📚 Reference
+
+### 🔗 Code Repository
 
 You can find the complete Java code examples demonstrating the SOLID principles here:
 
@@ -816,6 +819,6 @@ You can find the complete Java code examples demonstrating the SOLID principles 
 
 ### [🔝 Back to Top](#index)
 
-### [Read More ➡️](https://nirmalakumarsahu.in/articles.html)
+### [Read More ➡️](https://nirmalakumarsahu.in/java.html)
 
 ---
