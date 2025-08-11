@@ -11,7 +11,7 @@
 ## 📑 Index
 
 - [🔍 What is Spring Boot Security?](#-what-is-spring-boot-security)
-- [🛡️ Key Security Areas in a Spring Boot Application](##%EF%B8%8F-key-security-areas-in-a-spring-boot-application)
+- [🛡️ Key Security Areas in a Spring Boot Application](#%EF%B8%8F-key-security-areas-in-a-spring-boot-application)
   - [🔑 Authentication Methods](#-authentication-methods)
   - [📜 Authorization](#-authorization)
   - [🌐 API Security](#-api-security)
