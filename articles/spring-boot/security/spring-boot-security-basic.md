@@ -11,16 +11,16 @@
 ## 📑 Index
 
 - [🔍 What is Spring Boot Security?](#-what-is-spring-boot-security)
-- [🛡️ Key Security Areas in a Spring Boot Application](#-key-security-areas-in-a-spring-boot-application)
+- [🛡️ Key Security Areas in a Spring Boot Application](##%EF%B8%8F-key-security-areas-in-a-spring-boot-application)
   - [🔑 Authentication Methods](#-authentication-methods)
   - [📜 Authorization](#-authorization)
   - [🌐 API Security](#-api-security)
   - [🔐 Data Protection](#-data-protection)
   - [📡 Transport Layer Security](#-transport-layer-security)
-  - [⚙️ Configuration & Secrets Management](#-configuration--secrets-management)
+  - [⚙️ Configuration & Secrets Management](#%EF%B8%8F-configuration--secrets-management)
   - [🚀 Deployment & Server Security](#-deployment--server-security)
 - [📚 Advanced Security Concepts](#-advanced-security-concepts)
-- [🛡️ Common Attack Protections in Spring Security](#-common-attack-protections-in-spring-security)
+- [🛡️ Common Attack Protections in Spring Security](#%EF%B8%8F-common-attack-protections-in-spring-security)
 
 ---
 
