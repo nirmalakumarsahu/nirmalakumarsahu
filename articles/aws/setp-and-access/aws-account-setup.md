@@ -1,6 +1,6 @@
 # AWS Account Setup
 
-[Articles](https://nirmalakumarsahu.in/aws.html) | [My Profile](https://nirmalakumarsahu.in)
+[📄 Articles](https://nirmalakumarsahu.in/aws.html) | [👤 My Profile](https://nirmalakumarsahu.in)
 
 [![AWS](https://img.shields.io/badge/AWS-Cloud%20Computing-blue?logo=amazonaws)](https://aws.amazon.com/) [![Cloud Computing](https://img.shields.io/badge/Cloud%20Computing-IT%20Infrastructure-blue?logo=cloudflare)](https://en.wikipedia.org/wiki/Cloud_computing)
 
@@ -9,7 +9,7 @@
 
 ---
 
-## Index
+## 📑 Index
 
 - [What is AWS?](#what-is-aws)
   - [What AWS Offers](#%EF%B8%8F-what-aws-offers)
@@ -206,6 +206,6 @@ You can interact with AWS through:
 
 ### [🔝 Back to Top](#index)
 
-### [Read More ➡️](https://nirmalakumarsahu.in/aws.html)
+### [📖 Read More ➡️](https://nirmalakumarsahu.in/aws.html)
 
 ---

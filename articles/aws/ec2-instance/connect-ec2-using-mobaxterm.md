@@ -1,6 +1,6 @@
 # Connecting to EC2 Instance using MobaXterm
 
-[Articles](https://nirmalakumarsahu.in/aws.html) | [My Profile](https://nirmalakumarsahu.in)
+[📄 Articles](https://nirmalakumarsahu.in/aws.html) | [👤 My Profile](https://nirmalakumarsahu.in)
 
 [![AWS](https://img.shields.io/badge/AWS-Cloud%20Computing-blue?logo=amazonaws)](https://aws.amazon.com/) [![EC2](https://img.shields.io/badge/EC2-Compute%20Service-blue?logo=amazonaws)](https://aws.amazon.com/ec2/) [![MobaXterm](https://img.shields.io/badge/MobaXterm-SSH%20Client-blue?logo=mobaxterm)](https://mobaxterm.mobatek.net/) 
 
@@ -8,7 +8,7 @@
 
 ---
 
-## Index
+## 📑 Index
 
 - [🧰 What is MobaXterm?](#-what-is-mobaxterm)
   - [🧾 Key Features of MobaXterm](#-key-features-of-mobaxterm)
@@ -127,6 +127,6 @@ Click **OK** to start the session.
 
 ### [🔝 Back to Top](#index)
 
-### [Read More ➡️](https://nirmalakumarsahu.in/aws.html)
+### [📖 Read More ➡️](https://nirmalakumarsahu.in/aws.html)
 
 ---

@@ -1,6 +1,7 @@
 # Saga Choreography Design Pattern
 
-[Articles](https://nirmalakumarsahu.in/microservices.html) | [My Profile](https://nirmalakumarsahu.in)
+[📄 Articles](https://nirmalakumarsahu.in/microservices.html) | [👤 My Profile](https://nirmalakumarsahu.in)
+
 
 [![Saga Pattern](https://img.shields.io/badge/Saga%20Pattern-Distributed%20Transactions-blueviolet?logo=apachekafka)](https://microservices.io/patterns/data/saga.html)
 [![Choreography](https://img.shields.io/badge/Choreography%20Saga-Event%20Driven-lightgrey?logo=eventbrite)](https://microservices.io/patterns/data/saga.html)
@@ -14,7 +15,7 @@
 
 ---
 
-## Index
+## 📑 Index
 
 ---
 
@@ -205,6 +206,6 @@ Since we don’t have inventory in this scenario, compensation is minimal but st
    
 ### [🔝 Back to Top](#index)
 
-### [Read More ➡️](https://nirmalakumarsahu.in/articles.html)
+### [📖 Read More ➡️](https://nirmalakumarsahu.in/articles.html)
 
 ---

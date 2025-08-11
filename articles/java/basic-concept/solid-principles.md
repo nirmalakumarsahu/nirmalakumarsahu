@@ -1,6 +1,6 @@
 # SOLID Principles
 
-[Articles](https://nirmalakumarsahu.in/java.html) | [My Profile](https://nirmalakumarsahu.in)
+[📄 Articles](https://nirmalakumarsahu.in/java.html) | [👤 My Profile](https://nirmalakumarsahu.in)
 
 [![SOLID Principles](https://img.shields.io/badge/SOLID%20Principles-Software%20Design-blue?logo=solid)](https://en.wikipedia.org/wiki/SOLID)
 
@@ -9,7 +9,8 @@
 
 ---
 
-## Index
+## 📑 Index
+
 - [✅ Introduction](#-introduction)
   - [🔤 SOLID Acronym Breakdown](#-solid-acronym-breakdown)
 - [Single Responsibility Principle (SRP)](#single-responsibility-principle-srp)
@@ -819,6 +820,6 @@ You can find the complete Java code examples demonstrating the SOLID principles 
 
 ### [🔝 Back to Top](#index)
 
-### [Read More ➡️](https://nirmalakumarsahu.in/java.html)
+### [📖 Read More ➡️](https://nirmalakumarsahu.in/java.html)
 
 ---

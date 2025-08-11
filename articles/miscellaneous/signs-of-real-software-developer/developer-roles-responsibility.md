@@ -1,6 +1,7 @@
 # Developer Roles and Responsibilities
 
-[Articles](https://nirmalakumarsahu.in/miscellaneous.html) | [My Profile](https://nirmalakumarsahu.in)
+[📄 Articles](https://nirmalakumarsahu.in/miscellaneous.html) | [👤 My Profile](https://nirmalakumarsahu.in)
+
 
 [![Software Developer](https://img.shields.io/badge/Software%20Developer-Fullstack-blue?logo=github)](https://en.wikipedia.org/wiki/Software_development)
 
@@ -98,6 +99,6 @@
 
 ### [🔝 Back to Top](#developer-roles-and-responsibilities)
 
-### [Read More ➡️](https://nirmalakumarsahu.in/miscellaneous.html)
+### [📖 Read More ➡️](https://nirmalakumarsahu.in/miscellaneous.html)
 
 ---

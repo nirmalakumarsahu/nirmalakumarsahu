@@ -1,6 +1,6 @@
 # EC2 Instance Setup
 
-[Articles](https://nirmalakumarsahu.in/aws.html) | [My Profile](https://nirmalakumarsahu.in)
+[📄 Articles](https://nirmalakumarsahu.in/aws.html) | [👤 My Profile](https://nirmalakumarsahu.in)
 
 [![AWS](https://img.shields.io/badge/AWS-Cloud%20Computing-blue?logo=amazonaws)](https://aws.amazon.com/) [![EC2](https://img.shields.io/badge/EC2-Compute%20Service-blue?logo=amazonaws)](https://aws.amazon.com/ec2/)
 
@@ -8,7 +8,7 @@
 
 ---
 
-## Index
+## 📑 Index
 
 - [🚀 What is Amazon EC2?](#-what-is-amazon-ec2)
   - [🧱 Key Features of EC2](#-key-features-of-ec2)
@@ -192,6 +192,6 @@ Once launched:
 
 ### [🔝 Back to Top](#index)
 
-### [Read More ➡️](https://nirmalakumarsahu.in/aws.html)
+### [📖 Read More ➡️](https://nirmalakumarsahu.in/aws.html)
 
 ---

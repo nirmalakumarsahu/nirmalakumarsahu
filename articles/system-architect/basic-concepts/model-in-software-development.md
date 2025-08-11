@@ -1,12 +1,13 @@
 # Model in Software Development
 
-[Articles](https://nirmalakumarsahu.in/software-architect.html) | [My Profile](https://nirmalakumarsahu.in)
+[📄 Articles](https://nirmalakumarsahu.in/software-architect.html) | [👤 My Profile](https://nirmalakumarsahu.in)
 
 [![System Design](https://img.shields.io/badge/System-Design-blue?logo=systemdesign)](https://www.systemdesign.org/) [![Architecture](https://img.shields.io/badge/Architecture-Software%20Design-blue?logo=architecture)](https://www.architecture.org/) [![Model](https://img.shields.io/badge/Model-Software%20Development-blue?logo=model)](https://www.model.org/)
 
 ---
 
-## Index
+## 📑 Index
+
 - [What is Model in Software Development?](#-what-is-model-in-software-development)
 - [Types of Models in Software Development](#-types-of-models-in-software-development)
   - [Data Model](#-data-model)
@@ -197,6 +198,6 @@ Choosing Agile for rapid development and continuous feedback, or Waterfall for f
 
 ### [🔝 Back to Top](#index)
 
-### [Read More ➡️](https://nirmalakumarsahu.in/software-architect.html)
+### [📖 Read More ➡️](https://nirmalakumarsahu.in/software-architect.html)
 
 ---

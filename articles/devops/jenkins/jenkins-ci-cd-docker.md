@@ -1,6 +1,6 @@
 # Jenkins CI/CD with Docker 
 
-[Articles](https://nirmalakumarsahu.in/articles.html) | [My Profile](https://nirmalakumarsahu.in)
+[📄 Articles](https://nirmalakumarsahu.in/devops.html) | [👤 My Profile](https://nirmalakumarsahu.in)
 
 [![Jenkins](https://img.shields.io/badge/Jenkins-Automation-blue?logo=jenkins)](https://www.jenkins.io/) [![Docker](https://img.shields.io/badge/Docker-Containerization-blue?logo=docker)](https://www.docker.com/) [![Maven](https://img.shields.io/badge/Maven-BuildTool-blue?logo=apachemaven)](https://maven.apache.org/) [![Java](https://img.shields.io/badge/Java-21-blue?logo=openjdk)](https://openjdk.org/projects/jdk/21/) 
 
@@ -8,7 +8,7 @@
 
 ---
 
-## Index
+## 📑 Index
 
 - [Real-Time Application Environments](#real-time-application-environments)
   - [Teams in a Real-Time Application Environment](#teams-in-a-real-time-application-environment)

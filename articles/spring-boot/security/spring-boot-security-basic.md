@@ -11,16 +11,16 @@
 ## 📑 Index
 
 - [🔍 What is Spring Boot Security?](#-what-is-spring-boot-security)
-- [🛡️ Key Security Areas](#️-key-security-areas-in-a-spring-boot-application)
-  - [🔑 Authentication Methods](#a-authentication-methods)
-  - [📜 Authorization](#b-authorization)
-  - [🌐 API Security](#c-api-security)
-  - [🔐 Data Protection](#d-data-protection)
-  - [📡 Transport Layer Security](#e-transport-layer-security)
-  - [⚙️ Configuration & Secrets Management](#f-configuration--secrets-management)
-  - [🚀 Deployment & Server Security](#g-deployment--server-security)
+- [🛡️ Key Security Areas in a Spring Boot Application](#-key-security-areas-in-a-spring-boot-application)
+  - [🔑 Authentication Methods](#-authentication-methods)
+  - [📜 Authorization](#-authorization)
+  - [🌐 API Security](#-api-security)
+  - [🔐 Data Protection](#-data-protection)
+  - [📡 Transport Layer Security](#-transport-layer-security)
+  - [⚙️ Configuration & Secrets Management](#-configuration--secrets-management)
+  - [🚀 Deployment & Server Security](#-deployment--server-security)
 - [📚 Advanced Security Concepts](#-advanced-security-concepts)
-- [🛡️ Common Attack Protections](#-common-attack-protections-in-spring-security)
+- [🛡️ Common Attack Protections in Spring Security](#-common-attack-protections-in-spring-security)
 
 ---
 
@@ -56,7 +56,7 @@
 | **Transport Security**     | Encrypting communication (HTTPS/TLS).                                                                |
 | **Deployment Security**    | Hardening servers, containers, and networks.                                                         |
 
-### A. 🔑 Authentication Methods
+### 🔑 Authentication Methods
 
 1. **Basic Authentication**
 
@@ -93,7 +93,7 @@
 
     * Centralized authentication & authorization (Keycloak, Okta, AWS IAM, Azure AD).
 
-### B. 📜 Authorization
+### 📜 Authorization
 
 ```java
 @PreAuthorize("hasRole('ADMIN')")
@@ -109,30 +109,30 @@ http
   );
 ```
 
-### C. 🌐 API Security
+### 🌐 API Security
 
 * **CSRF Protection** — On by default for stateful apps. Disable for stateless APIs.
 * **CORS** — Define allowed domains for API calls.
 * **Rate Limiting** — Prevent brute force attacks.
 * **API Keys** — Provide client-specific access tokens.
 
-### D. 🔐 Data Protection
+### 🔐 Data Protection
 
 * **Password Hashing** — Use `BCrypt`, `Argon2`, or `PBKDF2`.
 * **Field Encryption** — Encrypt sensitive PII.
 * **Database Security** — Use least-privilege accounts & SSL connections.
 
-### E. 📡 Transport Layer Security
+### 📡 Transport Layer Security
 
 * Use **HTTPS/TLS** — Enforce SSL certificates.
 * Enable **HSTS** — Force browsers to use HTTPS.
 
-### F. ⚙️ Configuration & Secrets Management
+### ⚙️ Configuration & Secrets Management
 
 * Never hardcode secrets.
 * Use Spring Cloud Config, Vault, AWS Secrets Manager, or environment variables.
 
-### G. 🚀 Deployment & Server Security
+### 🚀 Deployment & Server Security
 
 * Keep dependencies updated.
 * Limit exposed ports.
@@ -168,6 +168,6 @@ http
 
 ### [🔝 Back to Top](#-index)
 
-### [Read More ➡️](https://nirmalakumarsahu.in/spring-boot.html)
+### [📖 Read More ➡️](https://nirmalakumarsahu.in/spring-boot.html)
 
 ---
