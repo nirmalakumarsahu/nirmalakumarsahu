@@ -68,8 +68,8 @@
 
     * Provides a **customizable login UI** with **session** and **cookie**-based authentication.
     * Can use **Spring Security’s built-in login page** or a **custom HTML form**.
-    * Supports user authentication via **InMemory**, **JDBC**, or **custom `UserDetailsService`**.
-    * **JDBC-based authentication** is preferred in production for persistence and scalability.
+    * Supports user authentication via **InMemory**, **Properties file** and **Database**.
+    * Using **Database** is preferred in production for persistence and scalability.
 
 3. **Token-based Authentication (JWT)**
 
@@ -167,6 +167,11 @@ http
 | **Clickjacking**     | Uses `X-Frame-Options` header   |
 
 ### [🔝 Back to Top](#-index)
+
+---
+
+
+
 
 ### [📖 Read More ➡️](https://nirmalakumarsahu.in/spring-boot.html)
 
