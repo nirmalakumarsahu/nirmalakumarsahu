@@ -171,7 +171,7 @@ public class SecurityConfig {
 }
 ```
 
-#### Types of authentication methods in Spring Security:
+**Types of authentication methods in Spring Security:**
 
 1. **Basic Authentication**
 
@@ -228,7 +228,7 @@ public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 }
 ```
 
-#### 📌 Method-Level Security
+**📌 Method-Level Security**
 
 We can enforce authorization rules directly within service methods by applying annotations like `@PreAuthorize` or `@Secured`.
 
@@ -373,7 +373,7 @@ Spring Security provides several `PasswordEncoder` implementations based on popu
 * **`SCryptPasswordEncoder`** → scrypt
 * **`Argon2PasswordEncoder`** → Argon2
 
-#### 🧩 **BCryptPasswordEncoder**
+**🧩 **BCryptPasswordEncoder****
 
 * The **`BCryptPasswordEncoder`** is the most commonly used implementation for hashing passwords with the bcrypt algorithm.
 * **Strength parameter** → Controls the computational complexity of the hashing process (default is `10` in Spring Security). Higher values increase security but also processing time.
