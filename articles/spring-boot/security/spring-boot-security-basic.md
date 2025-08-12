@@ -20,7 +20,7 @@
   - [⚙️ Configuration & Secrets Management](#%EF%B8%8F-configuration--secrets-management)
   - [🚀 Deployment & Server Security](#-deployment--server-security)
 - [📚 Advanced Security Concepts](#-advanced-security-concepts)
-- [🛡️ Common Attack Protections in Spring Security](#%EF%B8%8F-common-attack-protections-in-spring-security)
+- [🛡️ Common Attack Protections](#%EF%B8%8F-common-attack-protections)
 - [🛡️ Spring Security Core Concepts](#-spring-security-core-concepts)
   - [🔑 Authentication](#-authentication)
   - [🛂 Authorization](#-authorization)
@@ -118,9 +118,9 @@
 
 ---
 
-## 🛡️ Common Attack Protections in Spring Security
+## 🛡️ Common Attack Protections
 
-| Threat               | Protection in Spring Security   |
+| Threat               | Protection |
 | -------------------- | ------------------------------- |
 | **CSRF**             | Enabled by default for web apps |
 | **XSS**              | Encode output, validate inputs  |
