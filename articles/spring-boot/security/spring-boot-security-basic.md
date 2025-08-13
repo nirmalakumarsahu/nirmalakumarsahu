@@ -134,7 +134,7 @@
 
 ## 🛡️ Spring Security Core Concepts
 
-* **Spring Security’s** architecture is built around a set of core components that work in harmony to protect your applications. In this section, we’ll break down these components and illustrate them with examples following modern best practices.
+**Spring Security’s** architecture is built around a set of core components that work in harmony to protect your applications. In this section, we’ll break down these components and illustrate them with examples following modern best practices.
 
 ### 🔑 Authentication
 
