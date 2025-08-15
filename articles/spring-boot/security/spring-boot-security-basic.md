@@ -173,40 +173,40 @@ public class SecurityConfig {
 
 **Types of authentication methods in Spring Security:**
 
-1. **Basic Authentication**
+**1. Basic Authentication**
 
-    * Sends username/password with every request (Base64 encoded).
-    * Works for internal APIs over HTTPS.
-    * Not recommended for production due to security risks.
+* Sends username/password with every request (Base64 encoded).
+* Works for internal APIs over HTTPS.
+* Not recommended for production due to security risks.
 
-2. **Form-based Login**
+**2. Form-based Login**
 
-    * Provides a **customizable login UI** with **session** and **cookie**-based authentication.
-    * Can use **Spring Security’s built-in login page** or a **custom HTML form**.
-    * Supports user authentication via **InMemory**, **Properties file** and **Database**.
-    * Using **Database** is preferred in production for persistence and scalability.
+* Provides a **customizable login UI** with **session** and **cookie**-based authentication.
+* Can use **Spring Security’s built-in login page** or a **custom HTML form**.
+* Supports user authentication via **InMemory**, **Properties file** and **Database**.
+* Using **Database** is preferred in production for persistence and scalability.
 
-3. **Token-based Authentication (JWT)**
+**3. Token-based Authentication (JWT)**
 
-    * Stateless authentication for REST APIs.
-    * Token carries user details & expiry.
+* Stateless authentication for REST APIs.
+* Token carries user details & expiry.
 
-4. **OAuth2 / OpenID Connect (OIDC)**
+**4. OAuth2 / OpenID Connect (OIDC)**
 
-    * Social logins (Google, GitHub, Facebook)
-    * Single Sign-On (SSO) for enterprise systems.
+* Social logins (Google, GitHub, Facebook)
+* Single Sign-On (SSO) for enterprise systems.
 
-5. **LDAP Authentication**
+**5. LDAP Authentication**
 
-    * Uses corporate directory servers.
+* Uses corporate directory servers.
 
-6. **SAML Authentication**
+**6. SAML Authentication**
 
-    * Enterprise-level SSO with XML-based security.
+* Enterprise-level SSO with XML-based security.
 
-7. **IAM Integration**
+**7. IAM Integration**
 
-    * Centralized authentication & authorization (Keycloak, Okta, AWS IAM, Azure AD).
+* Centralized authentication & authorization (Keycloak, Okta, AWS IAM, Azure AD).
 
 
 ### 🛂 Authorization
@@ -277,6 +277,119 @@ public class AdminController {
     }
 }
 ```
+
+**Different authorization methods**:
+
+Authorization can be implemented in several different ways depending on your application’s architecture, authentication method, and security requirements.
+
+**1. Role-Based Access Control (RBAC)**
+
+* **How it works:** Users are assigned **roles** (e.g., `ROLE_ADMIN`, `ROLE_USER`) and access is granted based on those roles.
+* **Example in Spring Boot:**
+
+```java
+http.authorizeHttpRequests(auth -> auth
+    .requestMatchers("/admin/**").hasRole("ADMIN")
+    .requestMatchers("/user/**").hasAnyRole("USER", "ADMIN")
+    .anyRequest().authenticated()
+);
+```
+
+* **When to use:** Most common for enterprise apps where user groups have fixed privileges.
+
+**2. Permission/Authority-Based Access Control**
+
+* **How it works:** Instead of roles, access is defined at a **finer-grained permission level** (e.g., `READ_PRIVILEGE`, `WRITE_PRIVILEGE`).
+* **Example:**
+
+```java
+http.authorizeHttpRequests(auth -> auth
+    .requestMatchers("/reports/**").hasAuthority("REPORT_VIEW")
+    .anyRequest().authenticated()
+);
+```
+
+* **When to use:** When different roles may share some permissions but differ in others.
+
+**3. URL/Endpoint-Based Authorization**
+
+* **How it works:** Controls access to **specific URLs or endpoints**.
+* **Example:**
+
+```java
+http.authorizeHttpRequests(auth -> auth
+    .requestMatchers("/public/**").permitAll()
+    .requestMatchers("/secure/**").authenticated()
+);
+```
+
+* **When to use:** Quick configuration for REST APIs.
+
+**4. Method-Level Authorization**
+
+* **How it works:** Uses annotations like `@PreAuthorize`, `@PostAuthorize`, `@Secured` to secure service or controller methods.
+* **Example:**
+
+```java
+@PreAuthorize("hasRole('ADMIN')")
+public void deleteUser(Long id) { ... }
+```
+
+* **When to use:** For **business logic-level** security.
+
+**5. Expression-Based Authorization**
+
+* **How it works:** Uses **Spring Expression Language (SpEL)** for complex rules.
+* **Example:**
+
+```java
+@PreAuthorize("#username == authentication.name or hasRole('ADMIN')")
+public void updateProfile(String username) { ... }
+```
+
+* **When to use:** When conditions depend on runtime data.
+
+**6. OAuth2 / OpenID Connect Authorization**
+
+* **How it works:** Integrates with providers like Google, GitHub, Azure AD for **token-based access**.
+* **Example:**
+
+```java
+http.oauth2Login(); // OAuth2 login
+http.oauth2ResourceServer().jwt(); // JWT validation
+```
+
+* **When to use:** For modern **Single Sign-On (SSO)** and API authentication.
+
+**7. Attribute-Based Access Control (ABAC)**
+
+* **How it works:** Makes decisions based on **user attributes**, **resource attributes**, and **context** (e.g., time, location).
+* **Example:** Implement custom `AccessDecisionVoter` or use SpEL with attributes.
+* **When to use:** Fine-grained, policy-driven access control.
+
+**8. Custom Voter / Access Decision Manager**
+
+* **How it works:** Write a **custom `AccessDecisionVoter`** to decide based on your own rules.
+* **Example:** Restrict based on department, subscription level, etc.
+* **When to use:** Complex business rules not covered by roles/permissions.
+
+*9. Multi-Factor Authorization Checks**
+
+* **How it works:** Combine more than one check — for example, **role + department + ownership**.
+* **Example:** SpEL conditions in `@PreAuthorize` with multiple clauses.
+
+✅ **Summary Table**
+
+| Method           | Granularity  | Example Use Case          |
+| ---------------- | ------------ | ------------------------- |
+| RBAC             | Coarse       | Admin vs User             |
+| Permission-Based | Medium       | CRUD privileges           |
+| URL-Based        | Coarse       | API endpoint restrictions |
+| Method-Level     | Fine         | Secure service methods    |
+| Expression-Based | Very Fine    | Conditional rules         |
+| OAuth2/OIDC      | Token-Based  | SSO, federated login      |
+| ABAC             | Very Fine    | Context & attribute-based |
+| Custom Voter     | Fully Custom | Department-based logic    |
 
 ### 🧑‍💼 Principal
 
