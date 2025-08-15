@@ -373,7 +373,7 @@ http.oauth2ResourceServer().jwt(); // JWT validation
 * **Example:** Restrict based on department, subscription level, etc.
 * **When to use:** Complex business rules not covered by roles/permissions.
 
-*9. Multi-Factor Authorization Checks**
+**9. Multi-Factor Authorization Checks**
 
 * **How it works:** Combine more than one check — for example, **role + department + ownership**.
 * **Example:** SpEL conditions in `@PreAuthorize` with multiple clauses.
