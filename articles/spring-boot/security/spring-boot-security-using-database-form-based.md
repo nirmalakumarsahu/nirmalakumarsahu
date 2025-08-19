@@ -117,7 +117,7 @@ Object principal = auth.getPrincipal();
 
 ## 🚀 Implementation
 
-### 🏗️ Technology Stack 
+### 🏗️ Technology Stack
 
 **🖥️ Backend**
 
