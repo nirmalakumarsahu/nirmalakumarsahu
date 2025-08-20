@@ -207,7 +207,7 @@ spring-boot-security-using-database-form-based
 │           └── 📄 application.yml    
 │
 ├── 📄 docker-compose.yml
-├── 📄 pom.xml
+└── 📄 pom.xml
 ```
 
 ### 🔗 Code Repository
