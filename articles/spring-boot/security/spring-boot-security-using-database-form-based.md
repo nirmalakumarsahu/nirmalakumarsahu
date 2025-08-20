@@ -17,6 +17,7 @@
   - [📂 Project Structure](#-project-structure)
   - [🔗 Code Repository](#-code-repository)
   - [🚀 To Run the Spring Boot Application](#-to-run-the-spring-boot-application)
+- [🎥 Video Reference](#-video-reference)
 
 ---
 
