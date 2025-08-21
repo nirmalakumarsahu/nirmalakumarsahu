@@ -17,7 +17,7 @@
   - [📂 Project Structure](#-project-structure)
   - [🔗 Code Repository](#-code-repository)
   - [🚀 To Run the Spring Boot Application](#-to-run-the-spring-boot-application)
-- 
+- [🎥 Video Reference](#-video-reference)
 
 ---
 
@@ -189,16 +189,19 @@ docker ps
 
   ```bash
   mvn clean package -DskipTests
-  java -jar target/spring-boot-security-using-database-form-based-0.0.1-SNAPSHOT.jar
+  java -jar target/spring-boot-security-using-database-in-rest-api-0.0.1-SNAPSHOT.jar
   ```
 
 ### [🔝 Back to Top](#-index)
 
---- 
+---
 
 ## 🎥 Video Reference
 
+For a detailed running and demonstration of the application walkthrough,  
+watch the following YouTube video:
 
+[![Watch the video](https://img.youtube.com/vi/p1Wm5dbLuHs/0.jpg)](https://www.youtube.com/watch?v=p1Wm5dbLuHs)
 
 ### [🔝 Back to Top](#-index)
 
