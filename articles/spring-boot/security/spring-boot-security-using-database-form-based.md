@@ -160,7 +160,7 @@ spring-boot-security-using-database-form-based
 │       │   └── 📂 com/sahu/springboot/security/
 │       │       ├── 📂 config/        
 │       │       │   ├── 📄 CustomAuthenticationEntryPoint.java
-│       │       │   └── 📄 SecurityConfiguration.java
+│       │       │   └── 📄 SecurityConfig.java
 │       │       │
 │       │       ├── 📂 constant/      
 │       │       │   └── 📄 AuthConstants.java

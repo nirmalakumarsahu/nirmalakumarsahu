@@ -93,7 +93,9 @@ spring-boot-security-using-database-in-rest-api
 │       │   └── 📂 com/sahu/springboot/security/
 │       │       ├── 📂 config/
 │       │       │   ├── CustomAuthenticationEntryPoint.java
-│       │       │   └── SecurityConfiguration.java
+│       │       │   ├── OpenApiConfig.java
+│       │       │   ├── OpenApiProperties.java
+│       │       │   └── SecurityConfig.java
 │       │       │
 │       │       ├── 📂 constant/
 │       │       │   └── AuthConstants.java
