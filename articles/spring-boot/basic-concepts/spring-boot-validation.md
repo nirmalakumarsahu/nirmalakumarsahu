@@ -561,6 +561,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/user")
 public class UserController {
 
+    //For Form based applications
     @PostMapping("/registerBasic")
     public String registerBasicInfo(@Validated(BasicInfo.class) @RequestBody User user,
                                     BindingResult result) {
@@ -569,17 +570,17 @@ public class UserController {
         }
         return "✅ Basic Info Registered Successfully!";
     }
-
+    
     @PostMapping("/registerAdvanced")
-    public String registerAdvancedInfo(@Validated(AdvancedInfo.class) @RequestBody User user,
-                                       BindingResult result) {
-        if (result.hasErrors()) {
-            return "❌ Advanced Info Validation Failed: " + result.getAllErrors();
-        }
+    public String registerAdvancedInfo(@Validated(AdvancedInfo.class) @RequestBody User user) {
         return "✅ Advanced Info Registered Successfully!";
     }
 }
 ```
+
+* For REST APIs → usually don’t use BindingResult, instead let Spring throw MethodArgumentNotValidException and handle it globally in `@ControllerAdvice`/ `@RestControllerAdvice`.
+
+* For Form-based MVC apps (Thymeleaf, JSP, etc.) → BindingResult is useful because you want to redisplay the same form with validation messages.
 
 **🔑 Key Points**
 
