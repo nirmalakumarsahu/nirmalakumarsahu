@@ -12,10 +12,10 @@
 
 - [📌 Introduction](#-introduction)
   - [❓ What is an Exception?](#-what-is-an-exception)
-  - [🛡️ What is Exception Handling?](#-what-is-exception-handling)
+  - [🛡️ What is Exception Handling?](#what-is-exception-handling)
   - [⚙️ Exception Handling in Java](#️-exception-handling-in-java)
 - [🌱 Exception Handling in Spring Boot](#-exception-handling-in-spring-boot)
-- [🛠️ Different Ways to Handle Exceptions](#️-different-ways-to-handle-exceptions)
+- [🛠️ Different Ways to Handle Exceptions in Spring Boot](#️-different-ways-to-handle-exceptions-in-spring-boot)
   - [1️⃣ Using try-catch (Local Handling)](#1️⃣-using-try-catch-local-handling)
   - [2️⃣ Using @ExceptionHandler (Controller Level)](#2️⃣-using-exceptionhandler-controller-level)
   - [3️⃣ Using @ControllerAdvice / @RestControllerAdvice (Global Handling)](#3️⃣-using-controlleradvice--restcontrolleradvice-global-handling--best-practice)
@@ -34,7 +34,7 @@
 
 ## 📌 Introduction
 
-### ❓ What is an **Exception**?
+### ❓ What is an Exception?
 
 An **exception** is an **unexpected event** ⚡ that occurs during program execution and **disrupts the normal flow** of instructions.
 
@@ -47,7 +47,7 @@ An **exception** is an **unexpected event** ⚡ that occurs during program execu
 
 ➡️ In short: exceptions are **runtime errors** caused by mistakes, invalid inputs, or system failures.
 
-### 🛡️ What is **Exception Handling**?
+### 🛡️ What is Exception Handling? <a id="what-is-exception-handling"></a>
 
 **Exception Handling** = the process of **responding to exceptions** in a controlled way ✅ instead of letting the program crash 💥.
 
