@@ -18,10 +18,10 @@
 - [🛠️ Different Ways to Handle Exceptions in Spring Boot](#️-different-ways-to-handle-exceptions-in-spring-boot)
   - [1️⃣ Using try-catch (Local Handling)](#1️⃣-using-try-catch-local-handling)
   - [2️⃣ Using @ExceptionHandler (Controller Level)](#2️⃣-using-exceptionhandler-controller-level)
-  - [3️⃣ Using @ControllerAdvice / @RestControllerAdvice (Global Handling)](#3️⃣-using-controlleradvice--restcontrolleradvice-global-handling--best-practice)
+  - [3️⃣ Using @ControllerAdvice / @RestControllerAdvice (Global Handling)](#using-controller-advice)
   - [4️⃣ Using ResponseStatusException](#4️⃣-using-responsestatusexception)
   - [5️⃣ Using @ResponseStatus on Custom Exceptions](#5️⃣-using-responsestatus-on-custom-exceptions)
-  - [6️⃣ Extending ResponseEntityExceptionHandler](#6️⃣-extending-responseentityexceptionhandler-built-in)
+  - [6️⃣ Extending ResponseEntityExceptionHandler](#extending-response-entity-exception-handler)
   - [🏆 Industry Best Practice](#-industry-best-practice)
 - [🚀 Implementation](#-implementation)
     - [🏗️ Technology Stack](#-technology-stack)
@@ -158,7 +158,7 @@ public class ProductController {
 
 ✅ Keeps controller clean, but exception handling is **limited to that controller**.
 
-### 3️⃣ **Using `@ControllerAdvice` / `@RestControllerAdvice` (Global Handling 🌍 / ✅ Best Practice)**
+### 3️⃣ **Using `@ControllerAdvice` / `@RestControllerAdvice` (Global Handling 🌍 / ✅ Best Practice)** <a id="using-controller-advice"></a>
 
 This is the **industry standard** approach for global exception handling.
 
@@ -229,7 +229,8 @@ When thrown, Spring automatically returns `404 Not Found`.
 ✅ Clean, no extra handler needed.
 ❌ Less control over response body.
 
-### 6️⃣ **Extending `ResponseEntityExceptionHandler` (Spring Built-in)**
+### 6️⃣ **Extending `ResponseEntityExceptionHandler` (Spring Built-in)** <a id="extending-response-entity-exception-handler"></a>
+
 
 Spring provides `ResponseEntityExceptionHandler` for handling common exceptions like validation, `MethodArgumentNotValidException`, etc.
 
