@@ -517,7 +517,7 @@ public interface BasicInfo {}
 public interface AdvancedInfo {}
 ```
 
-### 2️⃣ Entity with Group-based Validation**
+### 2️⃣ Entity with Group-based Validation
 
 Apply different constraints for different groups.
 
@@ -543,7 +543,7 @@ public class User {
 }
 ```
 
-### 3️⃣ Controller Using @Validated**
+### 3️⃣ Controller Using @Validated
 
 We can validate the same `User` object differently depending on the endpoint.
 
