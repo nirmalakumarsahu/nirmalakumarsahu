@@ -62,7 +62,7 @@ Benefits:
 Java provides a robust mechanism with:
 👉 `try` 🧪 `catch` 🎯 `finally` 🔒 `throw` 🎲 `throws` 📢
 
-### 💻 Example:
+💻 Example:
 
 ```java
 public class Example {
