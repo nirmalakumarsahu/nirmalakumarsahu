@@ -98,7 +98,7 @@ Here:
 * ⚡ **Exception** → the unexpected error itself.
 * 🛡️ **Exception Handling** → managing the error gracefully without crashing the program.
 
-### [🔝 Back to Top](#index)
+### [🔝 Back to Top](#-index)
 
 ---
 
@@ -111,6 +111,8 @@ In **Spring Boot**, exception handling = managing **errors & unexpected conditio
 * 🧹 Keeps code **clean & consistent and easy to maintain**.
 
 👉 By default, Spring Boot shows a **whitelabel error page** or JSON error response. In real-world apps, we customize it.
+
+### [🔝 Back to Top](#-index)
 
 ---
 ## 🛠️ Different Ways to Handle Exceptions in Spring Boot
@@ -261,7 +263,7 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
 ✔️ Use **`@ResponseStatus`** for simple cases ⚡
 
 
-### [🔝 Back to Top](#index)
+### [🔝 Back to Top](#-index)
 
 ---
 
