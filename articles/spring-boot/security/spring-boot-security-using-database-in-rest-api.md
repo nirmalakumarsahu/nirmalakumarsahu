@@ -1,4 +1,4 @@
-# Spring Boot Security using Database In Rest API
+# Spring Boot Security using Database in Rest API
 
 [📄 Articles](https://nirmalakumarsahu.in/spring-boot.html) | [👤 My Profile](https://nirmalakumarsahu.in)
 
@@ -52,7 +52,7 @@ So when a user tries to log in, Spring Security will:
 
 ## 🚀 Implementation
 
-### 🏗️ Technology Stack
+### 🏗️ Technology Stack <a id="-technology-stack"></a>
 
 **🖥️ Backend**
 
