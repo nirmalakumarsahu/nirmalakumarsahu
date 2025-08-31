@@ -10,6 +10,37 @@
 
 ## 📑 Index
 
+- [✅ What is Validation in Spring Boot?](#-what-is-validation-in-spring-boot)
+- [🏷️ Different Validation Annotations in Spring Boot](#️-different-validation-annotations-in-spring-boot)
+  - [1. Null / Empty Checks](#1-null--empty-checks)
+  - [2. String Length / Size](#2-string-length--size)
+  - [3. Number Validations](#3-number-validations)
+  - [4. Boolean Checks](#4-boolean-checks)
+  - [5. Date & Time Constraints](#5-date--time-constraints)
+  - [6. String Format Validators](#6-string-format-validators)
+  - [7. Custom Validation ✨](#7-custom-validation-)
+  - [📊 Quick Reference Table](#-quick-reference-table)
+- [⚙️ How to Implement Validation in Spring Boot](#️-how-to-implement-validation-in-spring-boot)
+  - [1️⃣ Using Bean Validation Annotations (Most Common)](#1️⃣-using-bean-validation-annotations-most-common)
+  - [2️⃣ Custom Error Handling with @ControllerAdvice or @RestControllerAdvice](#2️⃣-custom-error-handling-with-controlleradvice-or-restcontrolleradvice)
+  - [3️⃣ Method-Level Validation](#3️⃣-method-level-validation)
+- [🎯 Custom Validation in Spring Boot](#-custom-validation-in-spring-boot)
+  - [1️⃣ Create a Custom Validation Annotation](#1️⃣-create-a-custom-validation-annotation)
+  - [2️⃣ Create the Custom Validator Class](#2️⃣-create-the-custom-validator-class)
+  - [3️⃣ Apply Custom Validation in DTO/Entity](#3️⃣-apply-custom-validation-in-dtoentity)
+  - [🏷️ Annotation Elements in Spring Validation](#️-annotation-elements-in-spring-validation)
+- [✅ Validation Groups in Spring Boot](#-validation-groups-in-spring-boot)
+  - [1️⃣ Create Marker Interfaces](#1️⃣-create-marker-interfaces)
+  - [2️⃣ Entity with Group-based Validation](#2️⃣-entity-with-group-based-validation)
+  - [3️⃣ Controller Using @Validated](#3️⃣-controller-using-validated)
+- [🚀 Implementation](#-implementation)
+    - [🏗️ Technology Stack](#-technology-stack)
+    - [📂 Project Structure](#-project-structure)
+    - [🔗 Code Repository](#-code-repository)
+    - [🚀 To Run the Spring Boot Application](#-to-run-the-spring-boot-application)
+- [🎥 Video Reference](#-video-reference)
+
+
 ---
 
 ## ✅ What is Validation in Spring Boot?
@@ -335,7 +366,7 @@ public class RegisterRequest {
 }
 ```
 
-### ⚡ Real-World Use Cases for Custom Validators
+#### ⚡ Real-World Use Cases for Custom Validators
 
 ✅ Password strength → `@StrongPassword`
 
@@ -466,6 +497,100 @@ Now your validator (or custom error handler) can check the payload type and deci
 
 ---
 
+## ✅ Validation Groups in Spring Boot
+
+Validation groups let you **apply different validation rules for different use cases** on the same entity/model.
+
+For example:
+
+* **Basic Info Validation** → only checks username.
+* **Advanced Info Validation** → checks username + email.
+
+### 1️⃣ Create Marker Interfaces
+
+Marker interfaces represent validation groups.
+
+```java
+package com.sahu.springboot.validation.group;
+
+public interface BasicInfo {}
+public interface AdvancedInfo {}
+```
+
+### 2️⃣ Entity with Group-based Validation**
+
+Apply different constraints for different groups.
+
+```java
+package com.sahu.springboot.validation.model;
+
+import com.sahu.springboot.validation.group.BasicInfo;
+import com.sahu.springboot.validation.group.AdvancedInfo;
+import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class User {
+
+    @NotNull(message = "Username is required", groups = {BasicInfo.class, AdvancedInfo.class})
+    private String username;
+
+    @NotNull(message = "Email is required for advanced info", groups = AdvancedInfo.class)
+    private String email;
+
+}
+```
+
+### 3️⃣ Controller Using @Validated**
+
+We can validate the same `User` object differently depending on the endpoint.
+
+```java
+package com.sahu.springboot.validation.controller;
+
+import com.sahu.springboot.validation.group.BasicInfo;
+import com.sahu.springboot.validation.group.AdvancedInfo;
+import com.sahu.springboot.validation.model.User;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/user")
+public class UserController {
+
+    @PostMapping("/registerBasic")
+    public String registerBasicInfo(@Validated(BasicInfo.class) @RequestBody User user,
+                                    BindingResult result) {
+        if (result.hasErrors()) {
+            return "❌ Basic Info Validation Failed: " + result.getAllErrors();
+        }
+        return "✅ Basic Info Registered Successfully!";
+    }
+
+    @PostMapping("/registerAdvanced")
+    public String registerAdvancedInfo(@Validated(AdvancedInfo.class) @RequestBody User user,
+                                       BindingResult result) {
+        if (result.hasErrors()) {
+            return "❌ Advanced Info Validation Failed: " + result.getAllErrors();
+        }
+        return "✅ Advanced Info Registered Successfully!";
+    }
+}
+```
+
+**🔑 Key Points**
+
+1. **Marker Interfaces** → represent validation groups.
+2. **@Validated(Group.class)** → tells Spring which group to validate.
+3. Same entity (`User`) can have **different rules per use case**.
+
+### [🔝 Back to Top](#-index)
+
+---
+
 ## 🚀 Implementation
 
 ### 🏗️ Technology Stack <a id="-technology-stack"></a>
@@ -552,6 +677,10 @@ spring-boot-validation
 │       │       │   └── 📄 UserService.java
 │       │       │
 │       │       ├── 📂 validation/
+│       │       │   ├── 📂 group/
+│       │       │   │   ├── 📄 CreateGroup.java
+│       │       │   │   └── 📄 UpdateGroup.java
+│       │       │   │
 │       │       │   ├── 📄 StrongPassword.java
 │       │       │   └── 📄 StrongPasswordValidator.java
 │       │       │
