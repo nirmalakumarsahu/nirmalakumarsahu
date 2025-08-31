@@ -92,49 +92,52 @@ spring-boot-security-using-database-in-rest-api
 │       ├── 📂 java/
 │       │   └── 📂 com/sahu/springboot/security/
 │       │       ├── 📂 config/
-│       │       │   ├── CustomAuthenticationEntryPoint.java
-│       │       │   ├── OpenApiConfig.java
-│       │       │   ├── OpenApiProperties.java
-│       │       │   └── SecurityConfig.java
+│       │       │   ├── 📄 CustomAuthenticationEntryPoint.java
+│       │       │   ├── 📄 OpenApiConfig.java
+│       │       │   ├── 📄 OpenApiProperties.java
+│       │       │   └── 📄 SecurityConfig.java
 │       │       │
 │       │       ├── 📂 constant/
-│       │       │   └── AuthConstants.java
+│       │       │   └── 📄 AuthConstants.java
 │       │       │
-│       │       ├── 📂 controller/rest/
-│       │       │   ├── AuthRestController.java
-│       │       │   └── DashboardRestController.java
+│       │       ├── 📂 controller/
+│       │       │   └── 📂 rest/
+│       │       │       ├── 📄 AuthRestController.java
+│       │       │       └── 📄 DashboardRestController.java
 │       │       │
 │       │       ├── 📂 dto/
-│       │       │   ├── ApiResponse.java
-│       │       │   ├── LoginRequest.java
-│       │       │   ├── LoginResponse.java
-│       │       │   ├── UserRequest.java
-│       │       │   └── UserResponse.java
+│       │       │   ├── 📄 ApiResponse.java
+│       │       │   ├── 📄 LoginRequest.java
+│       │       │   ├── 📄 LoginResponse.java
+│       │       │   ├── 📄 UserRequest.java
+│       │       │   └── 📄 UserResponse.java
 │       │       │
 │       │       ├── 📂 model/
-│       │       │   ├── Role.java
-│       │       │   └── User.java
+│       │       │   ├── 📄 Role.java
+│       │       │   └── 📄 User.java
 │       │       │
 │       │       ├── 📂 repository/
-│       │       │   ├── RoleRepository.java
-│       │       │   └── UserRepository.java
+│       │       │   ├── 📄 RoleRepository.java
+│       │       │   └── 📄 UserRepository.java
 │       │       │
 │       │       ├── 📂 security/
 │       │       │   ├── 📂 dto/
-│       │       │   │   └── CustomUserDetails.java
+│       │       │   │   └── 📄 CustomUserDetails.java
+│       │       │   │
 │       │       │   └── 📂 util/
-│       │       │       └── SecurityUtil.java
+│       │       │       └── 📄 SecurityUtil.java
 │       │       │
 │       │       ├── 📂 service/
 │       │       │   ├── 📂 impl/
-│       │       │   │   ├── CustomUserDetailsService.java
-│       │       │   │   └── UserServiceImpl.java
-│       │       │   └── UserService.java
+│       │       │   │   ├── 📄 CustomUserDetailsService.java
+│       │       │   │   └── 📄 UserServiceImpl.java
+│       │       │   │
+│       │       │   └── 📄 UserService.java
 │       │       │
-│       │       └── SpringBootSecurityUsingDatabaseInRestApiApplication.java
+│       │       └── 📄 SpringBootSecurityUsingDatabaseInRestApiApplication.java
 │       │
 │       └── 📂 resources/
-│           └── application.yml
+│           └── 📄 application.yml
 │
 ├── 📄 docker-compose.yml
 └── 📄 pom.xml

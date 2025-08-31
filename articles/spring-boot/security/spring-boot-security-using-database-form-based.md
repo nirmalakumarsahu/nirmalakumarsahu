@@ -158,54 +158,58 @@ spring-boot-security-using-database-form-based
 │   └── 📂 main/
 │       ├── 📂 java/
 │       │   └── 📂 com/sahu/springboot/security/
-│       │       ├── 📂 config/        
+│       │       ├── 📂 config/
 │       │       │   ├── 📄 CustomAuthenticationEntryPoint.java
 │       │       │   └── 📄 SecurityConfig.java
 │       │       │
-│       │       ├── 📂 constant/      
+│       │       ├── 📂 constant/
 │       │       │   └── 📄 AuthConstants.java
 │       │       │
-│       │       ├── 📂 controller/    
+│       │       ├── 📂 controller/
 │       │       │   ├── 📄 AuthController.java
 │       │       │   └── 📄 HomeController.java
 │       │       │
-│       │       ├── 📂 dto/           
+│       │       ├── 📂 dto/
 │       │       │   └── 📄 UserRequest.java
 │       │       │
-│       │       ├── 📂 model/         
+│       │       ├── 📂 model/
 │       │       │   ├── 📄 Role.java
 │       │       │   └── 📄 User.java
 │       │       │
-│       │       ├── 📂 repository/    
+│       │       ├── 📂 repository/
 │       │       │   ├── 📄 RoleRepository.java
 │       │       │   └── 📄 UserRepository.java
 │       │       │
-│       │       ├── 📂 security/      
+│       │       ├── 📂 security/
 │       │       │   ├── 📂 dto/
 │       │       │   │   └── 📄 CustomUserDetails.java
+│       │       │   │
 │       │       │   └── 📂 util/
 │       │       │       └── 📄 SecurityUtil.java
 │       │       │
-│       │       ├── 📂 service/       
+│       │       ├── 📂 service/
 │       │       │   ├── 📂 impl/
-│       │       │   │   ├── 📄 CustomUserDetailsService.java  
-│       │       │   │   └── 📄 UserServiceImpl.java           
+│       │       │   │   ├── 📄 CustomUserDetailsService.java
+│       │       │   │   └── 📄 UserServiceImpl.java
 │       │       │   │
-│       │       │   └── 📄 UserService.java                   
+│       │       │   └── 📄 UserService.java
 │       │       │
 │       │       └── 📄 SpringBootSecurityUsingDatabaseFormBasedApplication.java
 │       │
 │       └── 📂 resources/
-│           ├── 📂 static/            
-│           ├── 📂 templates/         
-│           │   ├── 📂 error/ 
+│           ├── 📂 static/
+│           │
+│           ├── 📂 templates/
+│           │   ├── 📂 error/
 │           │   │   └── 📄 403.html
+│           │   │
 │           │   ├── 📄 admin-dashboard.html
 │           │   ├── 📄 dashboard.html
 │           │   ├── 📄 login.html
 │           │   ├── 📄 registration.html
 │           │   └── 📄 user-dashboard.html
-│           └── 📄 application.yml    
+│           │
+│           └── 📄 application.yml
 │
 ├── 📄 docker-compose.yml
 └── 📄 pom.xml

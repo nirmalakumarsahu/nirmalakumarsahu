@@ -311,29 +311,41 @@ spring-boot-exception-handling
 │       │       ├── 📂 config/
 │       │       │   ├── 📄 OpenApiConfig.java
 │       │       │   └── 📄 OpenApiProperties.java
+│       │       │
 │       │       ├── 📂 constant/
 │       │       │   └── 📄 AppConstants.java
-│       │       ├── 📂 controller/rest/
-│       │       │   └── 📄 ProductRestController.java
+│       │       │
+│       │       ├── 📂 controller/
+│       │       │   └── 📂 rest/
+│       │       │       └── 📄 ProductRestController.java
+│       │       │
 │       │       ├── 📂 dto/
 │       │       │   ├── 📄 ApiResponse.java
 │       │       │   ├── 📄 ProductRequest.java
 │       │       │   └── 📄 ProductResponse.java
+│       │       │
 │       │       ├── 📂 exception/
 │       │       │   ├── 📄 GlobalExceptionHandler.java
 │       │       │   ├── 📄 ProductAlreadyExistException.java
 │       │       │   └── 📄 ProductNotFoundException.java
+│       │       │
 │       │       ├── 📂 model/
 │       │       │   └── 📄 Product.java
+│       │       │
 │       │       ├── 📂 repository/
 │       │       │   └── 📄 ProductRepository.java
+│       │       │
 │       │       ├── 📂 service/
 │       │       │   ├── 📂 impl/
 │       │       │   │   └── 📄 ProductServiceImpl.java
+│       │       │   │
 │       │       │   └── 📄 ProductService.java
+│       │       │
 │       │       ├── 📂 util/
 │       │       │   └── 📄 ProductUtil.java
+│       │       │
 │       │       └── 📄 SpringBootExceptionHandlingApplication.java
+│       │
 │       └── 📂 resources/
 │           └── 📄 application.yml
 │
