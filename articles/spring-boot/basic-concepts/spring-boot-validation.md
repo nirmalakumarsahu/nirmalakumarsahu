@@ -654,7 +654,9 @@ spring-boot-validation
 │       │       ├── 📂 exception/
 │       │       │   ├── 📄 GlobalExceptionHandler.java
 │       │       │   ├── 📄 ProductAlreadyExistException.java
-│       │       │   └── 📄 ProductNotFoundException.java
+│       │       │   ├── 📄 ProductNotFoundException.java
+│       │       │   ├── 📄 UserAlreadyExistException.java
+│       │       │   └── 📄 UserNotFoundException.java
 │       │       │
 │       │       ├── 📂 model/
 │       │       │   ├── 📄 Product.java
