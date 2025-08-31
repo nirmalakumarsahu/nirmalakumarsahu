@@ -270,7 +270,7 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
 
 ## 🚀 Implementation
 
-### 🏗️ Technology Stack
+### 🏗️ Technology Stack <a id="-technology-stack"></a>
 
 **🖥️ Backend**
 
