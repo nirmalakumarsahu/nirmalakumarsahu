@@ -15,6 +15,7 @@
   - [🛡️ What is Exception Handling?](#what-is-exception-handling)
   - [⚙️ Exception Handling in Java](#️-exception-handling-in-java)
 - [🌱 Exception Handling in Spring Boot](#-exception-handling-in-spring-boot)
+  - [📝 Spring Boot Exception Handling Internal Flow](#-spring-boot-exception-handling-internal-flow)
 - [🛠️ Different Ways to Handle Exceptions in Spring Boot](#️-different-ways-to-handle-exceptions-in-spring-boot)
   - [1️⃣ Using try-catch (Local Handling)](#1️⃣-using-try-catch-local-handling)
   - [2️⃣ Using @ExceptionHandler (Controller Level)](#2️⃣-using-exceptionhandler-controller-level)
@@ -111,6 +112,12 @@ In **Spring Boot**, exception handling = managing **errors & unexpected conditio
 * 🧹 Keeps code **clean & consistent and easy to maintain**.
 
 👉 By default, Spring Boot shows a **whitelabel error page** or JSON error response. In real-world apps, we customize it.
+
+### 📝 Spring Boot Exception Handling Internal Flow
+
+💡 Let's understand **how Spring Boot Exception Handling works**.
+
+![spring-boot-exception-handling-internal-flow.png](images/spring-boot-exception-handling-internal-flow.png)
 
 ### [🔝 Back to Top](#-index)
 
@@ -230,7 +237,6 @@ When thrown, Spring automatically returns `404 Not Found`.
 ❌ Less control over response body.
 
 ### 6️⃣ **Extending `ResponseEntityExceptionHandler` (Spring Built-in)** <a id="extending-response-entity-exception-handler"></a>
-
 
 Spring provides `ResponseEntityExceptionHandler` for handling common exceptions like validation, `MethodArgumentNotValidException`, etc.
 

@@ -33,7 +33,7 @@
 
 💡 Let's understand **how Spring Boot Security works with a database** for **form-based authentication**.
 
-![spring-security-internal.png](images/spring-security-internal.png)
+![spring-boot-security-internal-flow.png](images/spring-boot-security-internal-flow.png)
 
 **1. Request with Credentials**
 
