@@ -319,7 +319,7 @@ spring-boot-exception-handling
 │       │       │   └── 📄 OpenApiProperties.java
 │       │       │
 │       │       ├── 📂 constant/
-│       │       │   └── 📄 AppConstants.java
+│       │       │   └── 📄 ApiStatus.java
 │       │       │
 │       │       ├── 📂 controller/
 │       │       │   └── 📂 rest/
