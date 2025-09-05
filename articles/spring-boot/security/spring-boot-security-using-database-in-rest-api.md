@@ -98,6 +98,7 @@ spring-boot-security-using-database-in-rest-api
 │       │       │   └── 📄 SecurityConfig.java
 │       │       │
 │       │       ├── 📂 constant/
+│       │       │   ├── 📄 ApiStatus.java
 │       │       │   └── 📄 AuthConstants.java
 │       │       │
 │       │       ├── 📂 controller/
