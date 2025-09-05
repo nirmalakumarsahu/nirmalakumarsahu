@@ -638,7 +638,7 @@ spring-boot-validation
 │       │       │   └── 📄 OpenApiProperties.java
 │       │       │
 │       │       ├── 📂 constant/
-│       │       │   └── 📄 AppConstants.java
+│       │       │   └── 📄 ApiStatus.java
 │       │       │
 │       │       ├── 📂 controller/rest/
 │       │       │   └── 📂 rest/
