@@ -1,4 +1,4 @@
-# Spring Boot Security using Database in Rest API
+# Spring Boot Security Securing REST API with Database Authentication
 
 [📄 Articles](https://nirmalakumarsahu.in/spring-boot.html) | [👤 My Profile](https://nirmalakumarsahu.in)
 
@@ -26,12 +26,6 @@
 🔹 Understand **Spring Security** basic concepts 👉 [Read here](https://nirmalakumarsahu.in/spring-boot/security/spring-boot-security.html)
 
 ### [🔝 Back to Top](#-index)
-
----
-
-## Spring Boot Security using Database in REST API
-
-Good question 👍 Let me break it down for you in **simple terms with context**.
 
 ---
 
