@@ -219,7 +219,7 @@ spring-boot-security-using-database-form-based
 
 You can find the complete code repository for this project on GitHub:
 
-[![GitHub - spring-boot-security-using-database-form-based](https://img.shields.io/badge/GitHub-View%20Code-black?logo=github)](https://github.com/nirmalakumarsahu/spring-boot-security-using-database-form-based.git)
+[![GitHub - spring-boot-security-form-based-authentication-with-database](https://img.shields.io/badge/GitHub-View%20Code-black?logo=github)](https://github.com/nirmalakumarsahu/spring-boot-security-form-based-authentication-with-database.git)
 
 
 ### 🚀 To Run the Spring Boot Application
