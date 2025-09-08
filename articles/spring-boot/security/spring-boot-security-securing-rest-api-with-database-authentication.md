@@ -142,7 +142,7 @@ spring-boot-security-using-database-in-rest-api
 
 You can find the complete code repository for this project on GitHub:
 
-[![GitHub - solid-principles-java](https://img.shields.io/badge/GitHub-View%20Code-black?logo=github)](https://github.com/nirmalakumarsahu/spring-boot-security-using-database-in-rest-api.git)
+[![GitHub - spring-boot-security-securing-rest-api-with-database-authentication](https://img.shields.io/badge/GitHub-View%20Code-black?logo=github)](https://github.com/nirmalakumarsahu/spring-boot-security-securing-rest-api-with-database-authentication.git)
 
 ### 🚀 To Run the Spring Boot Application
 
