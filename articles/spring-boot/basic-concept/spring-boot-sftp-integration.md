@@ -54,13 +54,13 @@ SFTP stands for **Secure File Transfer Protocol** (also known as **SSH File Tran
 | **Auth**     | Username + Password          | Username + Password + Certs | Username + Password / SSH keys    |
 | **Protocol** | FTP only                     | FTP + TLS                   | Built on SSH                      |
 
-### 🛠️ Example Use Cases
+### 🛠️ Example Use Cases <a id="-example-use-cases"></a>
 
 * Uploading reports from an application to a bank’s secure server.
 * Automating data exchange between organizations (insurance, healthcare, finance).
 * Securely backing up files to a remote server.
 
-### ⚙️ How SFTP Works
+### ⚙️ How SFTP Works <a id="-how-sftp-works"></a>
 
 1. **Connection Initialization**
 
@@ -127,7 +127,7 @@ sftp> bye
 
 ---
 
-## 🛠️ Why Use SFTP in Spring Boot?
+## 🛠️ Why Use SFTP in Spring Boot? <a id="-why-use-sftp-in-spring-boot"></a>
 
 In enterprise systems, you often need to:
 
