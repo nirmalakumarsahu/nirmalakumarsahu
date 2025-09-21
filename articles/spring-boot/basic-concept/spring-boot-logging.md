@@ -51,6 +51,8 @@
 * It decouples your code from specific logging implementation, making your application more flexible / maintainable.
 * Supports features like **parameterized messages** (placeholders), so you avoid expensive string concatenation when the log level is disabled.
 
+![Logging Frameworks](./images/logging-frameworks.png)
+
 ### Logging Levels in SLF4J
 
 * **TRACE 🔍**: The most detailed level, used for fine-grained debugging information.
