@@ -17,12 +17,12 @@
   * [✨ Use-Cases of Logging](#-use-cases-of-logging)
   * [✨ Logging Frameworks](#-logging-frameworks)
 * [🔹 SLF4J](#-slf4j)
-  * [Logging Levels in SLF4J](#-logging-levels-in-slf4j)
+  * [✨ Logging Levels in SLF4J](#-logging-levels-in-slf4j)
   * [✅ Best Practices / Tips](#-best-practices--tips)
 * [📦 Types of Appenders](#-types-of-appenders)
   * [💻 ConsoleAppender](#-consoleappender)
   * [📄 FileAppender](#-fileappender)
-  * [📂 RollingFileAppender](#-rollingfileappender-)
+  * [📂 RollingFileAppender](#-rollingfileappender)
   * [🚀 AsyncAppender](#-asyncappender)
   * [🌐 SocketAppender](#-socketappender)
   * [🗄 DBAppender](#-dbappender)
@@ -76,7 +76,7 @@
 
 ![Logging Frameworks](./images/logging-frameworks.png)
 
-### Logging Levels in SLF4J
+### ✨ Logging Levels in SLF4J
 
 * **TRACE 🔍**: The most detailed level, used for fine-grained debugging information.
 * **DEBUG 🛠**: Used for general debugging information, less detailed than TRACE.
@@ -143,7 +143,7 @@ In **Logback**, an **Appender** is responsible for **writing log events** to a p
 * **Usage**: Small apps, dev environments.
 * **Cons**: File grows endlessly → not practical for production.
 
-### 📂 RollingFileAppender ✅ (Most Common in Production)
+### 📂 RollingFileAppender ✅ (Most Common in Production) <a id="-rollingfileappender"></a>
 
 * **Destination**: Writes logs to a file, then **rolls** (rotates) them based on **time or size**.
 * **Usage**: Production apps → keeps logs manageable.
@@ -221,7 +221,7 @@ In **Logback**, an **Appender** is responsible for **writing log events** to a p
 
 ---
 
-## ⚙️ Logging in Spring Boot
+## ⚙️ Logging in Spring Boot <a name="-logging-in-spring-boot"></a>
 * Spring Boot uses **SLF4J** as the logging facade and **Logback** as the default logging implementation.
 * It provides a default configuration that is suitable for most applications, but you can customize it as needed.
 * Spring Boot automatically configures logging based on the presence of certain dependencies in the classpath.
@@ -233,7 +233,7 @@ In **Logback**, an **Appender** is responsible for **writing log events** to a p
 * 
 * If you want another logger (e.g., Log4j2), you exclude Logback and add `spring-boot-starter-log4j2`.
 
-### 🖊️ Using SLF4J in Code
+### 🖊️ Using SLF4J in Code <a id="-using-slf4j-in-code"></a>
 
 You typically declare a logger like this:
 
@@ -277,7 +277,7 @@ public class MyService {
 }
 ```
 
-### ⚙️ Configuration
+### ⚙️ Configuration <a id="-configuration"></a>
 
 #### Default (no config file)
 
