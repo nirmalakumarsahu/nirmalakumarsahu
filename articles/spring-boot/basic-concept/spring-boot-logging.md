@@ -13,6 +13,29 @@
 
 ## 📑 Index
 
+* [📝 What is Logging?](#-what-is-logging)
+  * [✨ Use-Cases of Logging](#-use-cases-of-logging)
+  * [✨ Logging Frameworks](#-logging-frameworks)
+* [🔹 SLF4J](#-slf4j)
+  * [Logging Levels in SLF4J](#-logging-levels-in-slf4j)
+  * [✅ Best Practices / Tips](#-best-practices--tips)
+* [📦 Types of Appenders](#-types-of-appenders)
+  * [💻 ConsoleAppender](#-consoleappender)
+  * [📄 FileAppender](#-fileappender)
+  * [📂 RollingFileAppender](#-rollingfileappender-)
+  * [🚀 AsyncAppender](#-asyncappender)
+  * [🌐 SocketAppender](#-socketappender)
+  * [🗄 DBAppender](#-dbappender)
+  * [🧩 SiftingAppender](#-siftingappender)
+  * [🛠 Custom Appenders](#-custom-appenders)
+  * [🔑 Summary Table](#-summary-table)
+* [⚙️ Logging in Spring Boot](#-logging-in-spring-boot)
+  * [🖊️ Using SLF4J in Code](#-using-slf4j-in-code)
+  * [⚙️ Configuration](#-configuration)
+  * [📊 Advanced Features](#-advanced-features)
+  * [🔄 How to Use **Log4j2** Instead of Logback](#-how-to-use-log4j2-instead-of-logback)
+  * [🔑 Key Differences (Logback vs Log4j2 in Spring Boot)](#-key-differences-logback-vs-log4j2-in-spring-boot)
+  
 ---
 
 ## 📝 What is Logging?
