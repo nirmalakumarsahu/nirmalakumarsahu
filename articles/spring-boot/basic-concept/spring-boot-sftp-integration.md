@@ -234,7 +234,8 @@ spring-boot-sftp-integration
 │       │       │   ├── 📄 GlobalExceptionHandler.java
 │       │       │   ├── 📄 InvalidSftpKeyFileException.java
 │       │       │   ├── 📄 SftpConfigAlreadyExistException.java
-│       │       │   └── 📄 SftpConfigNotFoundException.java
+│       │       │   ├── 📄 SftpConfigNotFoundException.java
+│       │       │   └── 📄 SftpException.java
 │       │       │
 │       │       ├── 📂 model/
 │       │       │   └── 📄 SftpConfig.java
