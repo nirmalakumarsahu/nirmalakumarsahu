@@ -222,13 +222,15 @@ spring-boot-sftp-integration
 │       │       │   └── 📄 KeyFormat.java
 │       │       │
 │       │       ├── 📂 controller/rest/
-│       │       │   ├── 📄 FileReaderRestController.java
-│       │       │   └── 📄 SftpConfigRestController.java
+│       │       │   ├── 📄 SftpConfigRestController.java
+│       │       │   ├── 📄 SftpFileRestController.java
+│       │       │   └── 📄 SftpKeyUtilRestController.java
 │       │       │
 │       │       ├── 📂 dto/
 │       │       │   ├── 📄 ApiResponse.java
 │       │       │   ├── 📄 SftpConfigRequest.java
-│       │       │   └── 📄 SftpConfigResponse.java
+│       │       │   ├── 📄 SftpConfigResponse.java
+│       │       │   └── 📄 SftpDirectoryResponse.java
 │       │       │
 │       │       ├── 📂 exception/
 │       │       │   ├── 📄 GlobalExceptionHandler.java
@@ -262,7 +264,11 @@ spring-boot-sftp-integration
 │       │       │   └── 📄 SftpKeyConvertorUtil.java
 │       │       │
 │       │       ├── 📂 validation/
+│       │       │   ├── 📄 PortValidator.java
+│       │       │   ├── 📄 RemoteDirectoryValidator.java
 │       │       │   ├── 📄 SftpConfigAuthValidator.java
+│       │       │   ├── 📄 ValidPort.java
+│       │       │   ├── 📄 ValidRemoteDirectory.java
 │       │       │   └── 📄 ValidSftpConfigAuth.java
 │       │       │
 │       │       └── 📄 SpringBootSftpIntegrationApplication.java
