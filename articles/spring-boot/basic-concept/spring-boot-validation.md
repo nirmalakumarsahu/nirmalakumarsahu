@@ -776,7 +776,7 @@ docker ps
 For a detailed running and demonstration of the application walkthrough,  
 watch the following YouTube video:
 
-[![Watch the video](https://img.youtube.com/vi/p1Wm5dbLuHs/0.jpg)](https://www.youtube.com/watch?v=p1Wm5dbLuHs)
+Coming Soon...
 
 ### [🔝 Back to Top](#-index)
 
