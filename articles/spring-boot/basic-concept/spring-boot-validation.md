@@ -206,7 +206,24 @@ private String password;
 
 There are multiple ways you can implement validation. Let’s go step by step.
 
-### 1️⃣ Using Bean Validation Annotations (Most Common)
+### 1️⃣ Using the Sping boot Starter Validation dependency, 
+
+If using Maven, add the following to your `pom.xml`:
+
+```XML
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
+```
+
+or if you are using Gradle, add the following to your `build.gradle`:
+
+```groovy
+implementation 'org.springframework.boot:spring-boot-starter-validation'
+```
+
+### 2️⃣ Using Bean Validation Annotations (Most Common)
 
 You annotate your DTOs (Request classes) with validation constraints.
 
@@ -250,7 +267,7 @@ public class UserController {
 
 👉 Here, `@Valid` ensures validation is applied. If validation fails, Spring throws `MethodArgumentNotValidException`.
 
-### 2️⃣ Custom Error Handling with `@ControllerAdvice` or `@RestControllerAdvice`
+### 3️⃣ Custom Error Handling with `@ControllerAdvice` or `@RestControllerAdvice`
 
 To make responses user-friendly:
 
@@ -277,7 +294,7 @@ public class GlobalExceptionHandler {
 
 👉 Now invalid input returns structured JSON errors.
 
-### 3️⃣ Method-Level Validation
+### 4️⃣ Method-Level Validation
 
 Spring also supports validating **method parameters & return values** with `@Validated`.
 
