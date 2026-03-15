@@ -15,7 +15,6 @@
 - [🧩 Types of Auditing (Very Important)](#-types-of-auditing-very-important)
 - [⚖️ Pros and Cons of Auditing](#--pros-and-cons-of-auditing)
 - [🏭 Real-Time Industry Approaches (IMPORTANT)](#-real-time-industry-approaches-important)
-- [🧪 How Big Companies Combine Approaches](#-how-big-companies-combine-approaches)
 - [🧠 Best Practice Summary (Golden Rules)](#-best-practice-summary-golden-rules)
 
 ---
@@ -111,7 +110,7 @@ Examples:
 * Exceptions
 * Performance timings
 
-✅ Used by developers & SRE teams
+✅ Used by developers & SRE (Site Reliability Engineering) teams
 
 ### 2️⃣ Functional / Business Audit
 
@@ -163,8 +162,6 @@ Examples:
 | Transparency | Clear accountability              |
 | Trust        | Builds customer & regulator trust |
 
----
-
 #### ❌ Cons (If Done Wrong)
 
 | Issue           | Cause                    |
@@ -187,7 +184,7 @@ Examples:
 
 #### How it works
 
-* Triggers / CDC / History tables
+* Triggers / CDC (Change Data Capture) / History tables
 
 #### Used by
 
@@ -197,11 +194,13 @@ Examples:
 #### Pros
 
 ✔ Accurate data-level tracking
+
 ✔ Cannot be bypassed
 
 #### Cons
 
 ❌ DB performance impact
+
 ❌ Hard to correlate with APIs
 
 ### 2️⃣ Application-Level Auditing (MOST COMMON)
@@ -218,7 +217,9 @@ Examples:
 #### Pros
 
 ✔ Full context (user, tenant, IP)
+
 ✔ Flexible
+
 ✔ Easy to extend
 
 #### Cons
@@ -238,7 +239,9 @@ Examples:
 #### Pros
 
 ✔ Single place
+
 ✔ No code duplication
+
 ✔ Performance metrics
 
 #### Cons
@@ -260,7 +263,9 @@ Examples:
 #### Pros
 
 ✔ High performance
+
 ✔ Decoupled
+
 ✔ Scalable
 
 #### Cons
@@ -276,18 +281,17 @@ Examples:
 #### Pros
 
 ✔ Searchable
+
 ✔ Visualization
 
 #### Cons
 
 ❌ Not tamper-proof
+
 ❌ Not legal-grade alone
 
-### [🔝 Back to Top](#-index)
 
----
-
-## 🧪 How Big Companies Combine Approaches
+### 🧪 How Big Companies Combine Approaches
 
 | Layer           | Purpose                |
 | --------------- | ---------------------- |
@@ -298,17 +302,18 @@ Examples:
 | ELK/Splunk      | Analysis               |
 | Audit DB        | Compliance             |
 
-### [🔝 Back to Top](#-index)
-
----
-
-## 🧠 Best Practice Summary (Golden Rules)
+### 🧠 Best Practice Summary (Golden Rules)
 
 ✔ Audit **events**, not everything
+
 ✔ Never block user request
+
 ✔ Mask sensitive data
+
 ✔ Separate audit storage
+
 ✔ Retention & purge policies
+
 ✔ Immutable logs (append-only)
 
 > In this article we explored the fundamentals of Spring Boot API auditing, its importance, types, industry practices, and best practices to implement effective auditing in your applications.
@@ -320,10 +325,6 @@ Examples:
 
 ### [🔝 Back to Top](#-index)
 
----
-
-### [🔝 Back to Top](#-index)
-
-### [📖 Read More ➡️](https://nirmalakumarsahu.in/articles.html)
+### [📖 Read More ➡️](https://nirmalakumarsahu.in/spring-boot.html)
 
 ---
