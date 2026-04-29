@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /files/*
-# Allow:  if inside /files/somthing we want to allow
-#Sitemap: https://nirmalakumarsahu.in/sitemap.xml
